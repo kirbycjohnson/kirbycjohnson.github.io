@@ -144,8 +144,8 @@ window.PORTFOLIO = {
       ],
       cover: {
         src: "images/projects/lvb-device/universal-vessel-anastomosis-poster.jpg",
-        alt: "Poster Presentation at Johns Hopkins Medicine",
-        caption: "Poster Presentation at Johns Hopkins Medicine",
+        alt: "Poster presentation at Johns Hopkins Medicine",
+        caption: "Poster presentation at Johns Hopkins Medicine",
       },
       highlights: [
         { value: "180+", label: "hours of OR observation" },
