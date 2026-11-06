@@ -93,7 +93,7 @@
 
         '<div class="p-media' + (thumbs.length === 0 ? " single" : thumbs.length === 1 ? " pair" : "") + '">' +
           '<button type="button" class="shot main" data-gi="' + start + '" aria-label="Enlarge image: ' + esc(main.caption || main.alt) + '">' +
-            '<img src="' + esc(main.src) + '" alt="' + esc(main.alt) + '" width="1200" height="800" loading="' + (i < 1 ? "eager" : "lazy") + '" decoding="async"' + (main.position ? ' style="object-position:' + esc(main.position) + '"' : "") + '>' +
+            '<img src="' + esc(main.src) + '" alt="' + esc(main.alt) + '" width="1200" height="800" loading="' + (i < 1 ? "eager" : "lazy") + '" decoding="async"' + ((main.position || main.fit) ? ' style="' + (main.position ? 'object-position:' + esc(main.position) + ';' : '') + (main.fit ? 'object-fit:' + esc(main.fit) + ';background:#fff;' : '') + '"' : "") + '>' +
           '</button>' +
           (thumbs.length ? '<div class="thumbs">' + thumbs.map(function (g, k) {
             return '<button type="button" class="shot' + (g.video ? " is-video" : "") + '" data-gi="' + (start + 1 + k) + '" aria-label="' + (g.video ? "Play video: " : "Enlarge image: ") + esc(g.caption || g.alt) + '">' +

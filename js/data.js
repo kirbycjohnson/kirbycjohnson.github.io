@@ -83,9 +83,9 @@ window.PORTFOLIO = {
         "Verification testing", "IQ/OQ validation", "Toleranced drawings",
       ],
       cover: {
-        src: "images/projects/applied-medical-surgical-simulation/camera-alignment-fixture-in-use.jpg",
-        alt: "Surgical training system with the camera alignment fixture, next to a laptop showing the camera view",
-        position: "center 40%",
+        src: "images/projects/applied-medical-surgical-simulation/simsei-internship-poster.jpg",
+        alt: "Internship poster covering the gallbladder simulator process improvement, camera fixture design, and ultrasonic welding DoE",
+        fit: "contain", // show the whole poster without cropping
       },
       highlights: [
         { value: "1 day", label: "from fabrication to production use" },
@@ -117,9 +117,9 @@ window.PORTFOLIO = {
         "The fixture was implemented in production the following day and immediately fixed the camera alignment problem. The molding change doubled output per cycle.",
       ],
       gallery: [
-        { src: "images/projects/applied-medical-surgical-simulation/fixture-cnc-machined-components.jpg", alt: "Kirby standing next to the CNC-machined camera fixture on a lab bench", caption: "The finished fixture, CNC machined in-house" },
-        { src: "images/projects/applied-medical-surgical-simulation/internship-final-presentation.jpg", alt: "Kirby presenting a poster summarizing internship projects", caption: "End-of-internship presentation" },
-        { src: "images/projects/applied-medical-surgical-simulation/fixture-cad-assembly.svg", alt: "SolidWorks assembly of the camera fixture", caption: "Fixture CAD assembly" },
+        { src: "images/projects/applied-medical-surgical-simulation/camera-mount-misalignment-points.jpg", alt: "Surgical training system with the points where the camera mount shifted out of alignment marked in red", caption: "Where the camera mount was shifting out of alignment", position: "center 40%" },
+        { src: "images/projects/applied-medical-surgical-simulation/cnc-machining-fixture-part.jpg", alt: "Desktop CNC mill machining a fixture component from plastic stock", caption: "CNC machining a fixture component" },
+        { src: "images/projects/applied-medical-surgical-simulation/kirby-with-finished-fixture.jpg", alt: "Kirby standing next to the training system mounted on the finished fixture", caption: "The finished fixture in place", position: "center 30%" },
       ],
     },
 
