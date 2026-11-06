@@ -123,6 +123,116 @@ window.PORTFOLIO = {
       ],
     },
 
+    /* ---------------- PROJECT: LVB device ---------------- */
+    {
+      id: "lvb-device",
+      hidden: false,
+      status: "in-progress",
+      title: "Lymphovenous Bypass (LVB) Device Development",
+      category: "Biomedical Engineering / Medical Device Design",
+      summary:
+        "An industry-sponsored device for lymphovenous bypass, the supermicrosurgery that reroutes lymphatic fluid into nearby veins to treat lymphedema. Built from 180+ hours in the OR and 50+ stakeholder interviews.",
+      role:
+        "Biomedical design team member focused on device concept development, engineering design, clinical needs assessment, and translating surgeon feedback into design requirements.",
+      org: "Johns Hopkins CBID · Industry-sponsored",
+      dates: "Jun 2026 – Present",
+      team: "CBID master’s biodesign team",
+      skills: [
+        "Medical device design", "CAD", "Design thinking", "Clinical needs assessment",
+        "Surgeon interviews", "Anatomical research", "Design for manufacturability",
+      ],
+      cover: {
+        src: "images/projects/lvb-device/universal-vessel-anastomosis-poster.jpg",
+        alt: "Kirby standing beside the team’s Universal Vessel Anastomosis need poster at Johns Hopkins CBID",
+      },
+      highlights: [
+        { value: "180+", label: "hours of OR observation" },
+        { value: "349", label: "clinical needs validated" },
+        { value: "50+", label: "stakeholder interviews" },
+      ],
+      overview: [
+        "Lymphovenous bypass connects lymphatic vessels to nearby venules, often less than a millimeter across, so trapped lymphatic fluid can drain. It is one of the most technically demanding procedures in reconstructive microsurgery.",
+        "Our team was embedded in reconstructive microsurgery and peripheral nerve operating rooms to find where a new device could make a meaningful difference, then committed to the highest-impact need for development.",
+      ],
+      process: [
+        { title: "Clinical immersion", text: "Observed 180+ hours of reconstructive microsurgery and peripheral nerve cases, documenting workflow, instruments, and failure points." },
+        { title: "Need validation", text: "Tested 349 candidate needs through 50+ interviews with surgeons, value analysis committees, patients, and other stakeholders." },
+        { title: "Need selection", text: "Scored needs on clinical, technical, and commercial feasibility to choose the single highest-impact opportunity." },
+        { title: "Concept to prototype", text: "Generating concepts, modeling in CAD, and building rapid prototypes, with surgeon feedback turned into design requirements at each round." },
+        { title: "Protecting the IP", text: "Working toward a patent filing on the selected concept." },
+      ],
+      contributions: [
+        "Conducted OR observations and documented procedural pain points that fed the team’s needs list.",
+        "Interviewed surgeons and stakeholders, then translated their feedback into measurable design requirements.",
+        "Researched lymphatic and venous anatomy to set dimensional and access constraints for the device.",
+        "Generated device concepts and developed CAD models and prototypes, with design for manufacturability in mind.",
+      ],
+      teamOutcomes: [
+        "Validated 349 clinical needs and narrowed them to one through a feasibility analysis.",
+        "Advancing the selected concept through rapid prototyping toward a patent filing.",
+      ],
+      outcome: [
+        "Ongoing. The team has selected its need and is iterating on prototypes with surgeon input.",
+      ],
+      note: "This is an industry-sponsored project with IP in progress, so some design details and images are intentionally withheld.",
+      gallery: [
+        { src: "images/projects/lvb-device/team-in-scrubs-or-observation.jpg", alt: "The microsurgery biodesign team in scrubs during clinical observations", caption: "Clinical immersion in the OR" },
+      ],
+    },
+
+    /* ---------------- PROJECT: MSK joint pain, India ---------------- */
+    {
+      id: "msk-joint-pain-india",
+      hidden: false,
+      status: "in-progress",
+      title: "Improving Joint Pain Care in Rural India",
+      category: "Global Health / Needs Finding & Device Design",
+      summary:
+        "Field research across 15 rural and urban healthcare sites in India to understand why people with musculoskeletal pain go without care, now driving a solution to expand access to rehabilitation.",
+      role:
+        "Biodesign engineer conducting field research, stakeholder validation, need prioritization, and solution development.",
+      org: "Johns Hopkins CBID · Industry-sponsored",
+      dates: "Jun 2026 – Present",
+      team: "CBID global health biodesign team with an open-source health NGO partner",
+      skills: [
+        "Contextual inquiry", "Stakeholder interviews", "Needs prioritization",
+        "Global health design", "Clinical needs assessment", "Field study planning",
+      ],
+      cover: {
+        src: "images/projects/msk-joint-pain-india/field-team-with-care-providers.jpg",
+        alt: "CBID team with local care providers during field research in rural India",
+      },
+      highlights: [
+        { value: "15", label: "rural and urban sites" },
+        { value: "367", label: "findings validated" },
+      ],
+      overview: [
+        "Many musculoskeletal (MSK) pain conditions respond well to guided exercise, but in much of rural India, rehabilitation is hard to reach. The team set out to understand the barriers firsthand before proposing anything.",
+      ],
+      process: [
+        { title: "Field research", text: "Observed care and interviewed patients and providers across 15 rural and urban healthcare sites." },
+        { title: "Validation", text: "Validated 367 findings with patients, care providers, and an open-source NGO partner." },
+        { title: "Prioritization", text: "Ranked needs by clinical impact, technical feasibility, and market potential." },
+        { title: "Solution and field test", text: "Developing a solution for exercise-responsive MSK pain, validating it with physiotherapists, and planning a follow-up field study in India." },
+      ],
+      contributions: [
+        "Conducted on-site research and interviews with patients and care providers.",
+        "Synthesized observations into validated findings with the NGO partner.",
+        "Scored and prioritized needs against clinical, technical, and market criteria.",
+        "Developing and testing solution concepts with physiotherapists.",
+      ],
+      teamOutcomes: [
+        "Mapped barriers to MSK care across 15 sites and validated 367 findings.",
+        "Selected a focus on expanding rehabilitation access for exercise-responsive MSK pain.",
+      ],
+      outcome: [
+        "Ongoing. A follow-up field study in India will test the solution with patients and physiotherapists.",
+      ],
+      gallery: [
+        { src: "images/projects/msk-joint-pain-india/stakeholder-interview-at-clinic.jpg", alt: "Team taking notes during an interview with care providers at a clinic in India", caption: "Interviewing care providers on site" },
+      ],
+    },
+
     /* ---------------- PROJECT: GaitWay ---------------- */
     {
       id: "gaitway",
@@ -239,6 +349,47 @@ window.PORTFOLIO = {
       ],
     },
 
+    /* ---------------- PROJECT: Breath-controlled COPD rehab game ---------------- */
+    {
+      id: "breath-controlled-copd-game",
+      hidden: false,
+      title: "Breath-Controlled Rehab Game for COPD",
+      category: "Embedded Systems / Rehabilitation Technology",
+      summary:
+        "A handheld game you play with your breath. Blowing through a tube steers the player on a small OLED screen, turning breathing exercises for people with COPD into something closer to play.",
+      role:
+        "Sole designer and builder: circuit, firmware, and game.",
+      org: "UCLA · Microcontrollers course final project",
+      dates: "Jan – Mar 2026",
+      team: "Individual project",
+      skills: [
+        "Raspberry Pi", "C++", "Embedded programming", "Circuit design",
+        "I2C", "OLED display", "Pressure sensing", "Rehabilitation design",
+      ],
+      cover: {
+        src: "images/projects/breath-controlled-copd-game/oled-game-over-screen.jpg",
+        alt: "Small OLED screen held between two fingers showing the game's score and GAME OVER screen",
+      },
+      highlights: [],
+      overview: [
+        "Breathing exercises are a core part of pulmonary rehab for COPD, but they are repetitive and easy to skip. The goal was to make them engaging by turning each breath into a game input.",
+      ],
+      process: [],
+      contributions: [
+        "Designed and wired the full circuit on a breadboard: a breath sensor connected to a tube, a Raspberry Pi, and an OLED display over I2C.",
+        "Wrote the C++ code that reads the breath signal and converts it into real-time control of the game.",
+        "Built the game itself, including the scrolling obstacles, live score, and game-over screen.",
+        "Framed the design around pulmonary rehabilitation, so that controlled breathing is what keeps the player alive.",
+      ],
+      teamOutcomes: [],
+      outcome: [
+        "A working, playable prototype controlled entirely by the user's breath.",
+      ],
+      gallery: [
+        { video: "images/projects/breath-controlled-copd-game/breath-game-demo.mp4", src: "images/projects/breath-controlled-copd-game/breath-game-demo-poster.jpg", alt: "Video of the game being played by blowing into a tube while holding the OLED screen", caption: "Playing the game with breath control" },
+      ],
+    },
+
     /* ---------------- PROJECT: Pulse oximeter ---------------- */
     {
       id: "pulse-oximeter",
@@ -287,157 +438,6 @@ window.PORTFOLIO = {
       ],
       gallery: [],
     },
-    /* ---------------- PROJECT: LVB device ---------------- */
-    {
-      id: "lvb-device",
-      hidden: false,
-      status: "in-progress",
-      title: "Lymphovenous Bypass (LVB) Device Development",
-      category: "Biomedical Engineering / Medical Device Design",
-      summary:
-        "An industry-sponsored device for lymphovenous bypass, the supermicrosurgery that reroutes lymphatic fluid into nearby veins to treat lymphedema. Built from 180+ hours in the OR and 50+ stakeholder interviews.",
-      role:
-        "Biomedical design team member focused on device concept development, engineering design, clinical needs assessment, and translating surgeon feedback into design requirements.",
-      org: "Johns Hopkins CBID · Industry-sponsored",
-      dates: "Jun 2026 – Present",
-      team: "CBID master’s biodesign team",
-      skills: [
-        "Medical device design", "CAD", "Design thinking", "Clinical needs assessment",
-        "Surgeon interviews", "Anatomical research", "Design for manufacturability",
-      ],
-      cover: {
-        src: "images/projects/lvb-device/universal-vessel-anastomosis-poster.jpg",
-        alt: "Kirby standing beside the team’s Universal Vessel Anastomosis need poster at Johns Hopkins CBID",
-      },
-      highlights: [
-        { value: "180+", label: "hours of OR observation" },
-        { value: "349", label: "clinical needs validated" },
-        { value: "50+", label: "stakeholder interviews" },
-      ],
-      overview: [
-        "Lymphovenous bypass connects lymphatic vessels to nearby venules, often less than a millimeter across, so trapped lymphatic fluid can drain. It is one of the most technically demanding procedures in reconstructive microsurgery.",
-        "Our team was embedded in reconstructive microsurgery and peripheral nerve operating rooms to find where a new device could make a meaningful difference, then committed to the highest-impact need for development.",
-      ],
-      process: [
-        { title: "Clinical immersion", text: "Observed 180+ hours of reconstructive microsurgery and peripheral nerve cases, documenting workflow, instruments, and failure points." },
-        { title: "Need validation", text: "Tested 349 candidate needs through 50+ interviews with surgeons, value analysis committees, patients, and other stakeholders." },
-        { title: "Need selection", text: "Scored needs on clinical, technical, and commercial feasibility to choose the single highest-impact opportunity." },
-        { title: "Concept to prototype", text: "Generating concepts, modeling in CAD, and building rapid prototypes, with surgeon feedback turned into design requirements at each round." },
-        { title: "Protecting the IP", text: "Working toward a patent filing on the selected concept." },
-      ],
-      contributions: [
-        "Conducted OR observations and documented procedural pain points that fed the team’s needs list.",
-        "Interviewed surgeons and stakeholders, then translated their feedback into measurable design requirements.",
-        "Researched lymphatic and venous anatomy to set dimensional and access constraints for the device.",
-        "Generated device concepts and developed CAD models and prototypes, with design for manufacturability in mind.",
-      ],
-      teamOutcomes: [
-        "Validated 349 clinical needs and narrowed them to one through a feasibility analysis.",
-        "Advancing the selected concept through rapid prototyping toward a patent filing.",
-      ],
-      outcome: [
-        "Ongoing. The team has selected its need and is iterating on prototypes with surgeon input.",
-      ],
-      note: "This is an industry-sponsored project with IP in progress, so some design details and images are intentionally withheld.",
-      gallery: [
-        { src: "images/projects/lvb-device/team-in-scrubs-or-observation.jpg", alt: "The microsurgery biodesign team in scrubs during clinical observations", caption: "Clinical immersion in the OR" },
-      ],
-    },
-
-    /* ---------------- PROJECT: MSK joint pain, India ---------------- */
-    {
-      id: "msk-joint-pain-india",
-      hidden: false,
-      status: "in-progress",
-      title: "Improving Joint Pain Care in Rural India",
-      category: "Global Health / Needs Finding & Device Design",
-      summary:
-        "Field research across 15 rural and urban healthcare sites in India to understand why people with musculoskeletal pain go without care, now driving a solution to expand access to rehabilitation.",
-      role:
-        "Biodesign engineer conducting field research, stakeholder validation, need prioritization, and solution development.",
-      org: "Johns Hopkins CBID · Industry-sponsored",
-      dates: "Jun 2026 – Present",
-      team: "CBID global health biodesign team with an open-source health NGO partner",
-      skills: [
-        "Contextual inquiry", "Stakeholder interviews", "Needs prioritization",
-        "Global health design", "Clinical needs assessment", "Field study planning",
-      ],
-      cover: {
-        src: "images/projects/msk-joint-pain-india/field-team-with-care-providers.jpg",
-        alt: "CBID team with local care providers during field research in rural India",
-      },
-      highlights: [
-        { value: "15", label: "rural and urban sites" },
-        { value: "367", label: "findings validated" },
-      ],
-      overview: [
-        "Many musculoskeletal (MSK) pain conditions respond well to guided exercise, but in much of rural India, rehabilitation is hard to reach. The team set out to understand the barriers firsthand before proposing anything.",
-      ],
-      process: [
-        { title: "Field research", text: "Observed care and interviewed patients and providers across 15 rural and urban healthcare sites." },
-        { title: "Validation", text: "Validated 367 findings with patients, care providers, and an open-source NGO partner." },
-        { title: "Prioritization", text: "Ranked needs by clinical impact, technical feasibility, and market potential." },
-        { title: "Solution and field test", text: "Developing a solution for exercise-responsive MSK pain, validating it with physiotherapists, and planning a follow-up field study in India." },
-      ],
-      contributions: [
-        "Conducted on-site research and interviews with patients and care providers.",
-        "Synthesized observations into validated findings with the NGO partner.",
-        "Scored and prioritized needs against clinical, technical, and market criteria.",
-        "Developing and testing solution concepts with physiotherapists.",
-      ],
-      teamOutcomes: [
-        "Mapped barriers to MSK care across 15 sites and validated 367 findings.",
-        "Selected a focus on expanding rehabilitation access for exercise-responsive MSK pain.",
-      ],
-      outcome: [
-        "Ongoing. A follow-up field study in India will test the solution with patients and physiotherapists.",
-      ],
-      gallery: [
-        { src: "images/projects/msk-joint-pain-india/stakeholder-interview-at-clinic.jpg", alt: "Team taking notes during an interview with care providers at a clinic in India", caption: "Interviewing care providers on site" },
-      ],
-    },
-
-    /* ---------------- PROJECT: Breath-controlled COPD rehab game ---------------- */
-    {
-      id: "breath-controlled-copd-game",
-      hidden: false,
-      title: "Breath-Controlled Rehab Game for COPD",
-      category: "Embedded Systems / Rehabilitation Technology",
-      summary:
-        "A handheld game you play with your breath. Blowing through a tube steers the player on a small OLED screen, turning breathing exercises for people with COPD into something closer to play.",
-      role:
-        "Sole designer and builder: circuit, firmware, and game.",
-      org: "UCLA · Microcontrollers course final project",
-      dates: "Jan – Mar 2026",
-      team: "Individual project",
-      skills: [
-        "Raspberry Pi", "C++", "Embedded programming", "Circuit design",
-        "I2C", "OLED display", "Pressure sensing", "Rehabilitation design",
-      ],
-      cover: {
-        src: "images/projects/breath-controlled-copd-game/oled-game-over-screen.jpg",
-        alt: "Small OLED screen held between two fingers showing the game's score and GAME OVER screen",
-      },
-      highlights: [],
-      overview: [
-        "Breathing exercises are a core part of pulmonary rehab for COPD, but they are repetitive and easy to skip. The goal was to make them engaging by turning each breath into a game input.",
-      ],
-      process: [],
-      contributions: [
-        "Designed and wired the full circuit on a breadboard: a breath sensor connected to a tube, a Raspberry Pi, and an OLED display over I2C.",
-        "Wrote the C++ code that reads the breath signal and converts it into real-time control of the game.",
-        "Built the game itself, including the scrolling obstacles, live score, and game-over screen.",
-        "Framed the design around pulmonary rehabilitation, so that controlled breathing is what keeps the player alive.",
-      ],
-      teamOutcomes: [],
-      outcome: [
-        "A working, playable prototype controlled entirely by the user's breath.",
-      ],
-      gallery: [
-        { video: "images/projects/breath-controlled-copd-game/breath-game-demo.mp4", src: "images/projects/breath-controlled-copd-game/breath-game-demo-poster.jpg", alt: "Video of the game being played by blowing into a tube while holding the OLED screen", caption: "Playing the game with breath control" },
-      ],
-    },
-
   ],
 
   /* ------------------------------------------------------------------------
