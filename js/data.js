@@ -413,7 +413,7 @@ window.PORTFOLIO = {
       dates: "",
       team: "Individual project",
       skills: [
-        "Raspberry Pi", "Embedded programming", "Circuit design",
+        "Raspberry Pi", "C++", "Embedded programming", "Circuit design",
         "I2C", "OLED display", "Pressure sensing", "Rehabilitation design",
       ],
       cover: {
@@ -427,7 +427,7 @@ window.PORTFOLIO = {
       process: [],
       contributions: [
         "Designed and wired the full circuit on a breadboard: a breath sensor connected to a tube, a Raspberry Pi, and an OLED display over I2C.",
-        "Wrote the code that reads the breath signal and converts it into real-time control of the game.",
+        "Wrote the C++ code that reads the breath signal and converts it into real-time control of the game.",
         "Built the game itself, including the scrolling obstacles, live score, and game-over screen.",
         "Framed the design around pulmonary rehabilitation, so that controlled breathing is what keeps the player alive.",
       ],
