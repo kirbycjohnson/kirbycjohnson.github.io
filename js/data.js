@@ -145,6 +145,7 @@ window.PORTFOLIO = {
       cover: {
         src: "images/projects/lvb-device/universal-vessel-anastomosis-poster.jpg",
         alt: "Kirby standing beside the team’s Universal Vessel Anastomosis need poster at Johns Hopkins CBID",
+        caption: "Poster Presentation at Johns Hopkins Medicine",
       },
       highlights: [
         { value: "180+", label: "hours of OR observation" },
@@ -315,6 +316,7 @@ window.PORTFOLIO = {
       cover: {
         src: "images/projects/bionic-hand/bionic-hand-team-with-prototype.jpg",
         alt: "Team of four holding the finished bionic hand in the lab",
+        caption: "Bionics team holding the finished bionic hand",
         position: "center 35%",
       },
       highlights: [],
@@ -367,6 +369,7 @@ window.PORTFOLIO = {
       cover: {
         src: "images/projects/breath-controlled-copd-game/oled-game-over-screen.jpg",
         alt: "Small OLED screen held between two fingers showing the game's score and GAME OVER screen",
+        caption: "GAME OVER screen",
       },
       highlights: [],
       overview: [
