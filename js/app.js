@@ -52,7 +52,7 @@
 
         '<div class="side-actions">' +
           '<a class="btn" href="' + esc(S.resume) + '" target="_blank" rel="noopener">' + ICON.doc + ' Resume</a>' +
-          '<a class="btn btn-ghost" href="' + esc(S.resume) + '" download="' + esc(decodeURIComponent(S.resume.split("/").pop())) + '" aria-label="Download resume PDF">' + ICON.down + ' PDF</a>' +
+          '<a class="btn btn-ghost" href="' + esc(S.resume) + '" download="' + esc(decodeURIComponent(S.resume.split("?")[0].split("/").pop())) + '" aria-label="Download resume PDF">' + ICON.down + ' PDF</a>' +
         '</div>' +
 
         ((A.education && A.education.length) ?

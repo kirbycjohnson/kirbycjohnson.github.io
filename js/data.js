@@ -26,7 +26,7 @@ window.PORTFOLIO = {
 
     // Resume PDF. Replace the file in assets/resume/ with a new PDF of the
     // SAME NAME and the site picks it up automatically.
-    resume: "assets/resume/Kirby%20Johnson%20Resume.pdf",
+    resume: "assets/resume/Kirby%20Johnson%20Resume.pdf?v=20261106b",
 
     // Shown in search results and link previews.
     metaDescription:
@@ -144,7 +144,7 @@ window.PORTFOLIO = {
       ],
       cover: {
         src: "images/projects/lvb-device/universal-vessel-anastomosis-poster.jpg",
-        alt: "Kirby standing beside the team’s Universal Vessel Anastomosis need poster at Johns Hopkins CBID",
+        alt: "Poster Presentation at Johns Hopkins Medicine",
         caption: "Poster Presentation at Johns Hopkins Medicine",
       },
       highlights: [
@@ -315,7 +315,7 @@ window.PORTFOLIO = {
       ],
       cover: {
         src: "images/projects/bionic-hand/bionic-hand-team-with-prototype.jpg",
-        alt: "Team of four holding the finished bionic hand in the lab",
+        alt: "Bionics team holding the finished bionic hand",
         caption: "Bionics team holding the finished bionic hand",
         position: "center 35%",
       },
@@ -368,7 +368,7 @@ window.PORTFOLIO = {
       ],
       cover: {
         src: "images/projects/breath-controlled-copd-game/oled-game-over-screen.jpg",
-        alt: "Small OLED screen held between two fingers showing the game's score and GAME OVER screen",
+        alt: "GAME OVER screen",
         caption: "GAME OVER screen",
       },
       highlights: [],
