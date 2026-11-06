@@ -291,7 +291,6 @@ window.PORTFOLIO = {
       ],
       gallery: [
         { src: "images/projects/gaitway/gaitway-poster.jpg", alt: "GaitWay research poster", caption: "GaitWay poster", fit: "contain" },
-        { src: "images/projects/gaitway/sock-anchor-attachment-sketches.jpg", alt: "Sketches of three ways to attach the sensor anchor to a sock using stitched fabric", caption: "Sock attachment concepts", fit: "contain" },
       ],
     },
 
