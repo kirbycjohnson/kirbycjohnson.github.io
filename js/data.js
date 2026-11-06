@@ -48,7 +48,7 @@ window.PORTFOLIO = {
 
     // Optional round photo above your name. Leave as "" to hide it.
     // Example: "images/profile/kirby-johnson-headshot.jpg"
-    photo: "",
+    photo: "images/profile/kirby-johnson-headshot.jpg",
     photoAlt: "Portrait of Kirby Johnson",
   },
 
