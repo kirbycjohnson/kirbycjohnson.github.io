@@ -409,8 +409,8 @@ window.PORTFOLIO = {
         "A handheld game you play with your breath. Blowing through a tube steers the player on a small OLED screen, turning breathing exercises for people with COPD into something closer to play.",
       role:
         "Sole designer and builder: circuit, firmware, and game.",
-      org: "Microcontrollers course · Final project",
-      dates: "",
+      org: "UCLA · Microcontrollers course final project",
+      dates: "Jan – Mar 2026",
       team: "Individual project",
       skills: [
         "Raspberry Pi", "C++", "Embedded programming", "Circuit design",
