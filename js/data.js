@@ -180,8 +180,8 @@ window.PORTFOLIO = {
         "Worn comfortably on the wrist and ankle with no reports of irritation, small enough to hide under sleeves and pants, and able to detect simulated tremor episodes. Finalist at Rice 360°.",
       ],
       gallery: [
-        { src: "images/projects/gaitway/sock-anchor-attachment-sketches.jpg", alt: "Sketches of three ways to attach the sensor anchor to a sock using stitched fabric", caption: "Sock attachment concepts", fit: "contain" },
         { src: "images/projects/gaitway/gaitway-poster.jpg", alt: "GaitWay research poster", caption: "GaitWay poster", fit: "contain" },
+        { src: "images/projects/gaitway/sock-anchor-attachment-sketches.jpg", alt: "Sketches of three ways to attach the sensor anchor to a sock using stitched fabric", caption: "Sock attachment concepts", fit: "contain" },
       ],
     },
 
@@ -257,8 +257,8 @@ window.PORTFOLIO = {
         "Arduino", "Pediatric design",
       ],
       cover: {
-        src: "images/projects/pulse-oximeter/narwhal-finger-piece-3d-printed.jpg",
-        alt: "Blue 3D-printed narwhal-shaped finger piece of the pulse oximeter",
+        src: "images/projects/pulse-oximeter/bmes-symposium-poster.jpg",
+        alt: "BMES Symposium poster for the pulse oximeter project",
       },
       highlights: [
         { value: "Selected", label: "for the BMES Symposium" },
@@ -285,9 +285,7 @@ window.PORTFOLIO = {
       outcome: [
         "Showcased at the annual BMES Symposium.",
       ],
-      gallery: [
-        { src: "images/projects/pulse-oximeter/bmes-symposium-poster.jpg", alt: "BMES Symposium poster for the pulse oximeter project", caption: "BMES Symposium poster" },
-      ],
+      gallery: [],
     },
     /* ---------------- PROJECT: LVB device ---------------- */
     {

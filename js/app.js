@@ -37,11 +37,10 @@
 
   /* ---------- sidebar ---------- */
   function renderSidebar() {
-    var first = S.name.split(" ")[0], rest = S.name.split(" ").slice(1).join(" ");
     $("#sidebar").innerHTML =
       '<div class="side-inner">' +
         (A.photo ? '<img class="side-photo" src="' + esc(A.photo) + '" alt="' + esc(A.photoAlt || S.name) + '" width="240" height="240">' : "") +
-        '<h1 class="side-name">' + esc(first) + (rest ? "<br>" + esc(rest) : "") + '</h1>' +
+        '<h1 class="side-name">' + esc(S.name) + '</h1>' +
         '<p class="side-title">' + esc(S.title) + '</p>' +
         (A.statement ? '<p class="side-statement">' + esc(A.statement) + '</p>' : "") +
 
@@ -207,7 +206,7 @@
      centered row at the same scale (nothing is cropped). On narrow screens
      the row wraps instead of shrinking below MIN_H. */
   (function sizeMediaRows() {
-    var MIN_H = 170, MAX_H = 340, GAP = 14;
+    var GAP = 14;
     var rows = Array.prototype.slice.call(document.querySelectorAll(".p-media"));
     function ratio(el) {
       var w = el.naturalWidth || el.videoWidth, h = el.naturalHeight || el.videoHeight;
@@ -219,8 +218,10 @@
       var sum = 0;
       media.forEach(function (m) { sum += ratio(m); });
       var avail = row.clientWidth - GAP * (media.length - 1) - 2 * media.length;
-      var h = Math.max(MIN_H, Math.min(MAX_H, Math.floor(avail / sum)));
-      if (window.innerWidth <= 600) h = Math.min(h, 220);
+      var small = window.innerWidth <= 600;
+      var minH = small ? 110 : 170;
+      var maxH = Math.min(small ? 420 : 560, Math.round(window.innerHeight * 0.72));
+      var h = Math.max(minH, Math.min(maxH, Math.floor(avail / sum)));
       row.style.setProperty("--media-h", h + "px");
     }
     function fitAll() { rows.forEach(fit); }
