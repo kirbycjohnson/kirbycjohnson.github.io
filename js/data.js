@@ -399,6 +399,47 @@ window.PORTFOLIO = {
       ],
     },
 
+    /* ---------------- PROJECT: Breath-controlled COPD rehab game ---------------- */
+    {
+      id: "breath-controlled-copd-game",
+      hidden: false,
+      title: "Breath-Controlled Rehab Game for COPD",
+      category: "Embedded Systems / Rehabilitation Technology",
+      summary:
+        "A handheld game you play with your breath. Blowing through a tube steers the player on a small OLED screen, turning breathing exercises for people with COPD into something closer to play.",
+      role:
+        "Sole designer and builder: circuit, firmware, and game.",
+      org: "Microcontrollers course · Final project",
+      dates: "",
+      team: "Individual project",
+      skills: [
+        "Raspberry Pi", "Embedded programming", "Circuit design",
+        "I2C", "OLED display", "Pressure sensing", "Rehabilitation design",
+      ],
+      cover: {
+        src: "images/projects/breath-controlled-copd-game/oled-game-over-screen.jpg",
+        alt: "Small OLED screen held between two fingers showing the game's score and GAME OVER screen",
+      },
+      highlights: [],
+      overview: [
+        "Breathing exercises are a core part of pulmonary rehab for COPD, but they are repetitive and easy to skip. The goal was to make them engaging by turning each breath into a game input.",
+      ],
+      process: [],
+      contributions: [
+        "Designed and wired the full circuit on a breadboard: a breath sensor connected to a tube, a Raspberry Pi, and an OLED display over I2C.",
+        "Wrote the code that reads the breath signal and converts it into real-time control of the game.",
+        "Built the game itself, including the scrolling obstacles, live score, and game-over screen.",
+        "Framed the design around pulmonary rehabilitation, so that controlled breathing is what keeps the player alive.",
+      ],
+      teamOutcomes: [],
+      outcome: [
+        "A working, playable prototype controlled entirely by the user's breath.",
+      ],
+      gallery: [
+        { video: "images/projects/breath-controlled-copd-game/breath-game-demo.mp4", src: "images/projects/breath-controlled-copd-game/breath-game-demo-poster.jpg", alt: "Video of the game being played by blowing into a tube while holding the OLED screen", caption: "Playing the game with breath control" },
+      ],
+    },
+
   ],
 
   /* ------------------------------------------------------------------------
@@ -438,6 +479,7 @@ window.PORTFOLIO = {
         { name: "Arduino", icon: "arduino" },
         { name: "C++", icon: "cplusplus" },
         { name: "ESP32", icon: "esp32" },
+        { name: "Raspberry Pi", icon: "raspberry-pi" },
         { name: "PCB design", icon: "pcb-design" },
         { name: "IMU integration", icon: "imu" },
       ],
