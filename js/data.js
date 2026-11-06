@@ -367,8 +367,8 @@ window.PORTFOLIO = {
         "Global health design", "Clinical needs assessment", "Field study planning",
       ],
       cover: {
-        src: "images/projects/msk-joint-pain-india/cover-field-research-site.svg",
-        alt: "Field research at a healthcare site in India",
+        src: "images/projects/msk-joint-pain-india/field-team-with-care-providers.jpg",
+        alt: "CBID team with local care providers during field research in rural India",
       },
       highlights: [
         { value: "15", label: "rural and urban sites" },
@@ -397,8 +397,7 @@ window.PORTFOLIO = {
         "Ongoing. A follow-up field study in India will test the solution with patients and physiotherapists.",
       ],
       gallery: [
-        { src: "images/projects/msk-joint-pain-india/needs-prioritization-matrix.svg", alt: "Needs prioritization matrix", caption: "Needs prioritization" },
-        { src: "images/projects/msk-joint-pain-india/solution-concept-sketch.svg", alt: "Early solution concept sketch", caption: "Solution concept" },
+        { src: "images/projects/msk-joint-pain-india/stakeholder-interview-at-clinic.jpg", alt: "Team taking notes during an interview with care providers at a clinic in India", caption: "Interviewing care providers on site" },
       ],
     },
 
