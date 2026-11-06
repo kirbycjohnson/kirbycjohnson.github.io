@@ -96,8 +96,11 @@
             '<img src="' + esc(main.src) + '" alt="' + esc(main.alt) + '" width="1200" height="800" loading="' + (i < 1 ? "eager" : "lazy") + '" decoding="async"' + (main.position ? ' style="object-position:' + esc(main.position) + '"' : "") + '>' +
           '</button>' +
           (thumbs.length ? '<div class="thumbs">' + thumbs.map(function (g, k) {
-            return '<button type="button" class="shot" data-gi="' + (start + 1 + k) + '" aria-label="Enlarge image: ' + esc(g.caption || g.alt) + '">' +
-              '<img src="' + esc(g.src) + '" alt="' + esc(g.alt) + '" width="600" height="450" loading="lazy" decoding="async"' + (g.position ? ' style="object-position:' + esc(g.position) + '"' : "") + '></button>';
+            return '<button type="button" class="shot' + (g.video ? " is-video" : "") + '" data-gi="' + (start + 1 + k) + '" aria-label="' + (g.video ? "Play video: " : "Enlarge image: ") + esc(g.caption || g.alt) + '">' +
+              (g.video
+                ? '<video src="' + esc(g.video) + '" poster="' + esc(g.src) + '" muted loop playsinline autoplay preload="metadata" aria-hidden="true"></video><span class="play-badge" aria-hidden="true">▶</span>'
+                : '<img src="' + esc(g.src) + '" alt="' + esc(g.alt) + '" width="600" height="450" loading="lazy" decoding="async"' + (g.position ? ' style="object-position:' + esc(g.position) + '"' : "") + '>') +
+              '</button>';
           }).join("") + '</div>' : "") +
         '</div>' +
 
@@ -149,12 +152,20 @@
   function setupLightbox(items) {
     var dlg = $("#lightbox");
     if (!dlg || !items.length || typeof dlg.showModal !== "function") return;
-    var im = dlg.querySelector("img"), cap = dlg.querySelector("p"), cur = 0;
+    var im = dlg.querySelector("img"), vid = dlg.querySelector("video"), cap = dlg.querySelector("p"), cur = 0;
     function show(i) {
       cur = (i + items.length) % items.length;
-      im.src = items[cur].src; im.alt = items[cur].alt || "";
-      cap.textContent = items[cur].caption || items[cur].alt || "";
+      var it = items[cur];
+      if (it.video && vid) {
+        im.hidden = true; vid.hidden = false;
+        vid.src = it.video; vid.poster = it.src || ""; vid.play && vid.play().catch(function () {});
+      } else {
+        if (vid) { vid.pause(); vid.removeAttribute("src"); vid.load(); vid.hidden = true; }
+        im.hidden = false; im.src = it.src; im.alt = it.alt || "";
+      }
+      cap.textContent = it.caption || it.alt || "";
     }
+    dlg.addEventListener("close", function () { if (vid) vid.pause(); });
     document.querySelectorAll(".shot").forEach(function (b) {
       b.addEventListener("click", function () { show(+b.dataset.gi); dlg.showModal(); });
     });

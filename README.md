@@ -120,6 +120,14 @@ gallery: [
 
 Visitors can click any image to enlarge it and use the arrow keys to flip through the rest.
 
+**Videos:** you can add a short clip (under about 10 MB, ideally an `.mp4`) to a gallery. Give it a `video:` path plus a still image as `src:` that shows before it plays:
+
+```js
+{ video: "images/projects/bionic-hand/grape-picking-challenge.mp4", src: "images/projects/bionic-hand/grape-picking-challenge-poster.jpg", alt: "...", caption: "..." },
+```
+
+Videos from an iPhone are often `.mov` files that some browsers can't play, so send them to Claude to convert, or convert them to MP4 first.
+
 ### Edit a project's text
 
 Each project in `data.js` has these fields:

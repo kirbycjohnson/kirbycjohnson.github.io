@@ -125,7 +125,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .p-media { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); gap: 12px; margin-top: 28px; }
 .p-media.single { grid-template-columns: 1fr; }
 .thumbs { display: grid; grid-auto-rows: minmax(0, 1fr); gap: 12px; min-height: 0; }
-.thumbs .shot img { position: absolute; inset: 0; }
+.thumbs .shot img, .thumbs .shot video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.play-badge { position: absolute; left: 10px; bottom: 10px; width: 30px; height: 30px; border-radius: 50%; background: rgba(20,33,61,.85); color: #fff; font-size: 11px; display: grid; place-items: center; padding-left: 2px; }
 .shot { all: unset; display: block; cursor: zoom-in; border-radius: var(--radius); overflow: hidden; background: #eceef0; position: relative; }
 .shot:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .shot img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease, opacity .2s ease; }
@@ -170,6 +171,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .lightbox { border: 0; padding: 0; background: transparent; max-width: min(1200px, 94vw); max-height: 92vh; overflow: visible; }
 .lightbox::backdrop { background: rgba(15, 18, 22, .88); }
+.lightbox video { display: block; max-width: 100%; max-height: 82vh; margin: 0 auto; border-radius: var(--radius); background: #000; }
+.lightbox [hidden] { display: none !important; }
 .lightbox img { max-width: 100%; max-height: 82vh; margin: 0 auto; border-radius: var(--radius); background: #fff; }
 .lightbox p { color: #e6e8eb; text-align: center; font-size: 14.5px; margin: 14px 0 0; }
 .lightbox-close { position: fixed; top: 16px; right: 16px; background: rgba(255,255,255,.12); color: #fff; border: 0; border-radius: 999px; width: 44px; height: 44px; font-size: 24px; line-height: 1; cursor: pointer; }

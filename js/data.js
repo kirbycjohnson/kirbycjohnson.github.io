@@ -224,8 +224,10 @@ window.PORTFOLIO = {
         "First place in both competition challenges.",
       ],
       gallery: [
+        // A video entry: "video" is the .mp4 file, "src" is the still image shown before it plays.
+        { video: "images/projects/bionic-hand/grape-picking-challenge.mp4", src: "images/projects/bionic-hand/grape-picking-challenge-poster.jpg", alt: "Video of the bionic hand picking up grapes during the transfer challenge", caption: "Grape-picking and transfer challenge" },
+        { src: "images/projects/bionic-hand/servo-rack-and-tendon-driven-fingers.jpg", alt: "Servo rack with five servos routing tendons to the 3D-printed palm and fingers", caption: "Servo rack and tendon-driven fingers", position: "center 62%" },
         { src: "images/projects/bionic-hand/bionic-hand-block-stacking.jpg", alt: "The bionic hand gripping a wooden block during the stacking challenge", caption: "Block-stacking challenge" },
-        { src: "images/projects/bionic-hand/finger-cad-tendon-channels.svg", alt: "Fusion 360 model of a finger with tendon channels", caption: "Finger CAD with tendon channels" },
       ],
     },
 
