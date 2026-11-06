@@ -121,6 +121,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .p-title { font-size: clamp(24px, 2.6vw, 32px); line-height: 1.15; letter-spacing: -0.02em; }
 .p-org { margin: 8px 0 0; font-size: 14.5px; color: var(--muted); }
 .p-summary { margin: 16px 0 0; color: var(--ink-2); max-width: 68ch; }
+.p-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.p-links .btn { font-size: 14px; padding: 8px 14px; }
 
 .p-media { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); gap: 12px; margin-top: 28px; }
 .p-media.single { grid-template-columns: 1fr; }

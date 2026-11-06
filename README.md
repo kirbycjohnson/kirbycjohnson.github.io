@@ -146,6 +146,7 @@ Each project in `data.js` has these fields:
 | `outcome` | The "Result" line (first paragraph only) |
 | `note` | Small gray note, for example about withheld IP (optional) |
 | `gallery` | Thumbnails beside the cover (first three) |
+| `links` | Buttons under the summary, e.g. `{ label: "Final report (PDF)", href: "assets/docs/My_Report.pdf" }`. Upload the PDF to `assets/docs/` first. |
 | `status: "in-progress"` | Adds an "In progress" label |
 | `hidden: true` | Removes the project from the site without deleting it |
 

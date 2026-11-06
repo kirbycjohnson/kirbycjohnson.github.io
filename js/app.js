@@ -90,6 +90,9 @@
         '<h3 class="p-title" id="t-' + esc(p.id) + '">' + esc(p.title) + '</h3>' +
         (meta ? '<p class="p-org">' + esc(meta) + '</p>' : "") +
         '<p class="p-summary">' + esc(p.summary) + '</p>' +
+        ((p.links && p.links.length) ? '<div class="p-links">' + p.links.map(function (l) {
+          return '<a class="btn btn-ghost" href="' + esc(l.href) + '" target="_blank" rel="noopener">' + ICON.doc + ' ' + esc(l.label) + '</a>';
+        }).join("") + '</div>' : "") +
 
         '<div class="p-media' + (thumbs.length === 0 ? " single" : thumbs.length === 1 ? " pair" : "") + '">' +
           '<button type="button" class="shot main" data-gi="' + start + '" aria-label="Enlarge image: ' + esc(main.caption || main.alt) + '">' +
@@ -99,7 +102,7 @@
             return '<button type="button" class="shot' + (g.video ? " is-video" : "") + '" data-gi="' + (start + 1 + k) + '" aria-label="' + (g.video ? "Play video: " : "Enlarge image: ") + esc(g.caption || g.alt) + '">' +
               (g.video
                 ? '<video src="' + esc(g.video) + '" poster="' + esc(g.src) + '" muted loop playsinline autoplay preload="metadata" aria-hidden="true"></video><span class="play-badge" aria-hidden="true">▶</span>'
-                : '<img src="' + esc(g.src) + '" alt="' + esc(g.alt) + '" width="600" height="450" loading="lazy" decoding="async"' + (g.position ? ' style="object-position:' + esc(g.position) + '"' : "") + '>') +
+                : '<img src="' + esc(g.src) + '" alt="' + esc(g.alt) + '" width="600" height="450" loading="lazy" decoding="async"' + ((g.position || g.fit) ? ' style="' + (g.position ? 'object-position:' + esc(g.position) + ';' : '') + (g.fit ? 'object-fit:' + esc(g.fit) + ';background:#fff;' : '') + '"' : "") + '>') +
               '</button>';
           }).join("") + '</div>' : "") +
         '</div>' +

@@ -130,49 +130,58 @@ window.PORTFOLIO = {
       title: "GaitWay – Parkinson’s Gait Monitoring System",
       category: "Biomedical Engineering / Wearable Technology",
       summary:
-        "A wearable that combines multiple IMUs with ML-enabled feedback to characterize Parkinson’s gait abnormalities. Finalist in the Rice 360° Global Health Technologies Design Competition.",
+        "A modular wearable with wireless IMU sensors on the wrist and ankles, worn as a bracelet and a sensor-integrated sock, that tracks Parkinson’s gait throughout the day for under $100. Finalist in the Rice 360° Global Health Technologies Design Competition.",
       role:
         "Mechanical and sensor integration lead responsible for integrating wearable sensors and developing the physical device architecture.",
       org: "UCLA Bioengineering · Senior capstone",
       dates: "Sep 2025 – Jun 2026",
-      team: "UCLA senior capstone team",
+      team: "Team of five, advised by Dr. Sotiris Masmanidis",
+      // Buttons shown under the summary. Paths can point to files in assets/ or to any web link.
+      links: [
+        { label: "Final report (PDF)", href: "assets/docs/GaitWay_Final_Report.pdf" },
+        { label: "Poster (PDF)", href: "assets/docs/GaitWay_Poster.pdf" },
+      ],
       skills: [
         "SolidWorks", "Sensor integration", "ESP32", "MPU-9250 IMUs", "PCB design",
         "Arduino / C++", "Python", "Wireless communication", "Rapid prototyping",
+        "Soft goods design",
       ],
       cover: {
-        src: "images/projects/gaitway/cover-wearable-prototype-on-body.svg",
-        alt: "GaitWay wearable prototype worn on the body",
+        src: "images/projects/gaitway/snap-fit-sensor-casing-with-electronics.jpg",
+        alt: "3D-printed snap-fit sensor casing holding an ESP32 board, IMU, and Li-Po battery",
       },
       highlights: [
+        { value: "3", label: "wireless IMU sensors (wrist and both ankles)" },
+        { value: "<$100", label: "prototype cost vs. $520–$4,800 on the market" },
         { value: "Finalist", label: "Rice 360° Global Health Design Competition" },
       ],
       overview: [
-        "Gait changes such as shuffling, reduced stride length, and freezing are central to Parkinson’s disease, but they are usually assessed briefly and by eye during clinic visits. GaitWay measures gait with body-worn sensors to give a more objective picture.",
+        "Parkinson’s gait symptoms fluctuate through the day with medication, fatigue, and stress, so a short clinic visit misses most of them. Existing gait systems are tied to a lab, capture too little data, or cost too much for daily use.",
       ],
       process: [
-        { title: "Sensor placement", text: "Evaluated where on the body IMUs capture the most useful gait signal, and optimized placement for both data quality and comfort." },
-        { title: "Electronics", text: "Integrated MPU-9250 IMUs with ESP32 microcontrollers and custom PCBs for wireless data capture." },
-        { title: "Housings", text: "Prototyped 3D-printed and soft-good housings that hold sensors in a repeatable position on the body." },
-        { title: "Analysis and feedback", text: "Combined data from multiple IMUs with ML-enabled feedback to characterize gait abnormalities." },
+        { title: "Form factor", text: "Compared watches, bracelets, gloves, socks, and anklets for comfort, stability, and repeatable placement. Chose a wrist strap and a grip sock, with an anklet option." },
+        { title: "Housings", text: "Designed 3D-printed PLA casings, choosing a snap-fit box over a hinged one for a more secure fit and steadier sensors." },
+        { title: "Electronics", text: "Moved from a wired breadboard prototype to wireless ESP32 + MPU-9250 modules, then a custom PCB that shrank each module to 42 × 22 × 6 mm." },
+        { title: "Analysis", text: "Streams data over Bluetooth Low Energy to derive stride length, stride duration, walking speed, asymmetry, and double support time." },
       ],
       contributions: [
         "Led mechanical integration for the full system.",
-        "Optimized sensor placement on the body.",
-        "Designed and prototyped 3D-printed and soft-good sensor housings in SolidWorks.",
-        "Integrated the IMUs into the physical device architecture.",
+        "Optimized sensor placement on the wrist and ankle for signal quality and comfort.",
+        "Designed and prototyped the 3D-printed snap-fit sensor casings in SolidWorks.",
+        "Developed soft-good attachment concepts for anchoring the sensor to the sock.",
+        "Integrated the IMUs, ESP32 boards, and batteries into the physical device architecture.",
       ],
       teamOutcomes: [
-        "Built a working multi-IMU wearable with wireless data capture and ML-enabled gait feedback.",
+        "Built a three-sensor wireless system that reliably streams gait data in walking trials.",
+        "Designed a custom PCB that reduced each module to 42 × 22 × 6 mm.",
         "Named a finalist in the Rice 360° Undergraduate Global Health Technologies Design Competition.",
       ],
       outcome: [
-        "A functional prototype and a finalist placement at Rice 360°.",
+        "Worn comfortably on the wrist and ankle with no reports of irritation, small enough to hide under sleeves and pants, and able to detect simulated tremor episodes. Finalist at Rice 360°.",
       ],
       gallery: [
-        { src: "images/projects/gaitway/sensor-housing-cad.svg", alt: "SolidWorks model of an IMU sensor housing", caption: "Sensor housing CAD" },
-        { src: "images/projects/gaitway/system-architecture-diagram.svg", alt: "System diagram showing IMUs, ESP32, wireless link, and analysis", caption: "System architecture" },
-        { src: "images/projects/gaitway/pcb-and-electronics.svg", alt: "PCB and assembled electronics", caption: "PCB and electronics" },
+        { src: "images/projects/gaitway/sock-anchor-attachment-sketches.jpg", alt: "Sketches of three ways to attach the sensor anchor to a sock using stitched fabric", caption: "Sock attachment concepts", fit: "contain" },
+        { src: "images/projects/gaitway/gaitway-poster.jpg", alt: "GaitWay research poster", caption: "GaitWay poster", fit: "contain" },
       ],
     },
 
