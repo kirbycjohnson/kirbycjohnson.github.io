@@ -22,7 +22,7 @@ portfolio/
 │   └── app.js                 Builds the pages from data.js (no need to edit)
 ├── assets/
 │   └── resume/
-│       └── Kirby_Johnson_Resume.pdf
+│       └── Kirby Johnson Resume.pdf
 └── images/
     ├── placeholder.svg        Shown automatically if an image path is wrong
     ├── icons/                 Skill icons (one file per skill)
@@ -78,7 +78,7 @@ Open `js/data.js`. The `site` section holds your name, title, email, LinkedIn, a
 
 ### Replace your resume
 
-Name your new PDF exactly **`Kirby_Johnson_Resume.pdf`**, then upload it into `assets/resume/` on GitHub (**Add file** → **Upload files**, and it replaces the old one). No code changes needed.
+Name your new PDF exactly **`Kirby Johnson Resume.pdf`**, then upload it into `assets/resume/` on GitHub (**Add file** → **Upload files**, and it replaces the old one). No code changes needed.
 
 If you'd rather use a different file name, change the `resume:` line in the `site` section of `data.js` to match.
 

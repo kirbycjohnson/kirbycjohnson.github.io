@@ -26,7 +26,7 @@ window.PORTFOLIO = {
 
     // Resume PDF. Replace the file in assets/resume/ with a new PDF of the
     // SAME NAME and the site picks it up automatically.
-    resume: "assets/resume/Kirby_Johnson_Resume.pdf",
+    resume: "assets/resume/Kirby%20Johnson%20Resume.pdf",
 
     // Shown in search results and link previews.
     metaDescription:
