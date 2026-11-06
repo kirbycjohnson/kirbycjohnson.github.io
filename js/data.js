@@ -274,7 +274,7 @@ window.PORTFOLIO = {
         { title: "Analysis", text: "Streams data over Bluetooth Low Energy to derive stride length, stride duration, walking speed, asymmetry, and double support time." },
       ],
       contributions: [
-        "Led mechanical integration of a wearable monitoring system incorporating four wireless IMUs, ESP32 microcontrollers, and rechargeable batteries.",
+        "Led mechanical integration of a wearable monitoring system incorporating three wireless IMUs, ESP32 microcontrollers, and rechargeable batteries.",
         "Optimized wrist and ankle sensor placement for signal quality, comfort, and unobtrusive wearability.",
         "Designed and prototyped compact, 3D-printed snap-fit sensor enclosures in SolidWorks.",
         "Developed soft-good attachment concepts to securely integrate sensors into wearable garments.",
