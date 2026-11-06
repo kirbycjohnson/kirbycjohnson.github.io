@@ -63,6 +63,9 @@ window.PORTFOLIO = {
      - In "contributions", list what YOU did. In "teamOutcomes", list what the
        team achieved together. The project page shows these side by side.
      ------------------------------------------------------------------------ */
+  // Heading used above each project's results list (for example "Results" or "Impact").
+  resultsLabel: "Results",
+
   projects: [
     /* ---------------- PROJECT: Applied Medical ---------------- */
     {
@@ -87,11 +90,7 @@ window.PORTFOLIO = {
         alt: "Internship poster covering the gallbladder simulator process improvement, camera fixture design, and ultrasonic welding DoE",
         fit: "contain", // show the whole poster without cropping
       },
-      highlights: [
-        { value: "1 day", label: "from fabrication to production use" },
-        { value: "2×", label: "gallbladder simulator output per cycle" },
-        { value: "IQ/OQ", label: "validation executed" },
-      ],
+      highlights: [],
       overview: [
         "During production of an AI-assisted surgical training system, the overhead camera was getting knocked out of alignment. The AI model was training on inconsistent angles and failing as a result.",
         "Alongside the fixture, I took on two process projects: increasing throughput on a simulated laparoscopic cholecystectomy (gallbladder) model, and tuning the parameters of an ultrasonic welding machine.",
@@ -103,18 +102,20 @@ window.PORTFOLIO = {
         { title: "Validation and documentation", text: "Executed IQ/OQ validation and authored engineering documentation and SolidWorks manufacturing drawings for fixtures and molds." },
       ],
       contributions: [
-        "Owned the camera fixture end to end: CAD, drawings, CNC machining, and installation.",
-        "Redesigned the gallbladder simulator molding process to double part output per cycle.",
-        "Designed and executed the ultrasonic welding DoE.",
-        "Executed IQ/OQ validation and wrote the supporting documentation.",
-        "Formally presented all three projects at the end of the internship.",
+        "Redesigned the camera alignment fixture for an AI-assisted surgical training system, taking it from SolidWorks CAD and technical drawings through CNC machining and installation.",
+        "Redesigned the gallbladder simulator mold to double production output per cycle.",
+        "Designed and executed a design of experiments (DoE) to optimize ultrasonic welding parameters.",
+        "Executed IQ/OQ validation and developed supporting protocols, work instructions, and documentation.",
+        "Presented project outcomes and engineering recommendations to the team.",
       ],
       teamOutcomes: [
         "The fixture went into production the day after it was made and resolved the alignment issue, removing the need for manual readjustment.",
         "The updated molding process shortened manufacturing lead time for the simulator line.",
       ],
       outcome: [
-        "The fixture was implemented in production the following day and immediately fixed the camera alignment problem. The molding change doubled output per cycle.",
+        "Camera fixture implemented in production the following day, immediately resolving alignment inconsistencies.",
+        "Doubled gallbladder simulator output per molding cycle.",
+        "Delivered validated process improvements and recommendations for ultrasonic welding optimization.",
       ],
       gallery: [
         { src: "images/projects/applied-medical-surgical-simulation/camera-mount-misalignment-points.jpg", alt: "Surgical training system with the points where the camera mount shifted out of alignment marked in red", caption: "Where the camera mount was shifting out of alignment", position: "center 40%" },
@@ -162,19 +163,19 @@ window.PORTFOLIO = {
         { title: "Protecting the IP", text: "Working toward a patent filing on the selected concept." },
       ],
       contributions: [
-        "Conducted OR observations and documented procedural pain points that fed the team’s needs list.",
-        "Interviewed surgeons and stakeholders, then translated their feedback into measurable design requirements.",
-        "Researched lymphatic and venous anatomy to set dimensional and access constraints for the device.",
-        "Generated device concepts and developed CAD models and prototypes, with design for manufacturability in mind.",
+        "Observed microsurgical procedures and identified clinical pain points to inform device needs and design direction.",
+        "Interviewed surgeons and clinical stakeholders, translating feedback into measurable design requirements.",
+        "Researched lymphatic and venous anatomy to establish device dimensions, vessel constraints, and surgical access requirements.",
+        "Generated device concepts and developed CAD models and prototypes, considering manufacturability and clinical usability.",
       ],
       teamOutcomes: [
         "Validated 349 clinical needs and narrowed them to one through a feasibility analysis.",
         "Advancing the selected concept through rapid prototyping toward a patent filing.",
       ],
       outcome: [
-        "Ongoing. The team has selected its need and is iterating on prototypes with surgeon input.",
+        "Team selected a clinical need and is advancing device concepts through iterative prototyping and surgeon feedback.",
       ],
-      note: "This is an industry-sponsored project with IP in progress, so some design details and images are intentionally withheld.",
+      note: "",
       gallery: [
         { src: "images/projects/lvb-device/team-in-scrubs-or-observation.jpg", alt: "The microsurgery biodesign team in scrubs during clinical observations", caption: "Clinical immersion in the OR" },
       ],
@@ -216,17 +217,17 @@ window.PORTFOLIO = {
         { title: "Solution and field test", text: "Developing a solution for exercise-responsive MSK pain, validating it with physiotherapists, and planning a follow-up field study in India." },
       ],
       contributions: [
-        "Conducted on-site research and interviews with patients and care providers.",
-        "Synthesized observations into validated findings with the NGO partner.",
-        "Scored and prioritized needs against clinical, technical, and market criteria.",
-        "Developing and testing solution concepts with physiotherapists.",
+        "Conducted field research, patient interviews, and clinical observations across rural healthcare settings in India.",
+        "Synthesized patient and provider insights into validated needs in collaboration with an NGO partner.",
+        "Evaluated and prioritized design opportunities against clinical impact, technical feasibility, and market potential.",
+        "Collaborating with physiotherapists to develop and evaluate solutions for accessible, sustainable knee rehabilitation.",
       ],
       teamOutcomes: [
         "Mapped barriers to MSK care across 15 sites and validated 367 findings.",
         "Selected a focus on expanding rehabilitation access for exercise-responsive MSK pain.",
       ],
       outcome: [
-        "Ongoing. A follow-up field study in India will test the solution with patients and physiotherapists.",
+        "Advancing a solution concept toward patient testing, with a follow-up field study planned in India to evaluate usability and clinical adoption.",
       ],
       gallery: [
         { src: "images/projects/msk-joint-pain-india/stakeholder-interview-at-clinic.jpg", alt: "Team taking notes during an interview with care providers at a clinic in India", caption: "Interviewing care providers on site" },
@@ -261,9 +262,7 @@ window.PORTFOLIO = {
         alt: "3D-printed snap-fit sensor casing holding an ESP32 board, IMU, and Li-Po battery",
       },
       highlights: [
-        { value: "3", label: "wireless IMU sensors (wrist and both ankles)" },
         { value: "<$100", label: "prototype cost vs. $520–$4,800 on the market" },
-        { value: "Finalist", label: "Rice 360° Global Health Design Competition" },
       ],
       overview: [
         "Parkinson’s gait symptoms fluctuate through the day with medication, fatigue, and stress, so a short clinic visit misses most of them. Existing gait systems are tied to a lab, capture too little data, or cost too much for daily use.",
@@ -275,11 +274,11 @@ window.PORTFOLIO = {
         { title: "Analysis", text: "Streams data over Bluetooth Low Energy to derive stride length, stride duration, walking speed, asymmetry, and double support time." },
       ],
       contributions: [
-        "Led mechanical integration for the full system.",
-        "Optimized sensor placement on the wrist and ankle for signal quality and comfort.",
-        "Designed and prototyped the 3D-printed snap-fit sensor casings in SolidWorks.",
-        "Developed soft-good attachment concepts for anchoring the sensor to the sock.",
-        "Integrated the IMUs, ESP32 boards, and batteries into the physical device architecture.",
+        "Led mechanical integration of a wearable monitoring system incorporating four wireless IMUs, ESP32 microcontrollers, and rechargeable batteries.",
+        "Optimized wrist and ankle sensor placement for signal quality, comfort, and unobtrusive wearability.",
+        "Designed and prototyped compact, 3D-printed snap-fit sensor enclosures in SolidWorks.",
+        "Developed soft-good attachment concepts to securely integrate sensors into wearable garments.",
+        "Integrated electronics and power components into a compact physical device architecture.",
       ],
       teamOutcomes: [
         "Built a three-sensor wireless system that reliably streams gait data in walking trials.",
@@ -287,7 +286,9 @@ window.PORTFOLIO = {
         "Named a finalist in the Rice 360° Undergraduate Global Health Technologies Design Competition.",
       ],
       outcome: [
-        "Worn comfortably on the wrist and ankle with no reports of irritation, small enough to hide under sleeves and pants, and able to detect simulated tremor episodes. Finalist at Rice 360°.",
+        "Developed a functional wearable prototype capable of detecting simulated tremor episodes.",
+        "Achieved comfortable, low-profile wearability with no reported skin irritation.",
+        "Selected as a finalist in the Rice 360° competition.",
       ],
       gallery: [
         { src: "images/projects/gaitway/gaitway-poster.jpg", alt: "GaitWay research poster", caption: "GaitWay poster", fit: "contain" },
@@ -316,9 +317,7 @@ window.PORTFOLIO = {
         alt: "Team of four holding the finished bionic hand in the lab",
         position: "center 35%",
       },
-      highlights: [
-        { value: "2 / 2", label: "competition challenges won" },
-      ],
+      highlights: [],
       overview: [
         "The assignment was to design, build, and program a functional bionic hand that could perform real manipulation tasks, judged in a block-stacking competition and a grape-picking and transfer challenge.",
       ],
@@ -329,9 +328,9 @@ window.PORTFOLIO = {
         { title: "Competition", text: "Diagnosed a wiring fault that disabled three fingers right before the competition, and repaired it in time." },
       ],
       contributions: [
-        "Modeled the full mechanical structure in Fusion 360, including servo housings and tendon channels.",
-        "Built the tendon routing system from each finger joint to its servo.",
-        "Helped design and refine the per-finger tensioning mechanism.",
+        "Modeled the complete mechanical assembly in Fusion 360, including servo housings, finger structures, and tendon channels.",
+        "Designed and assembled tendon routing from individual finger joints to servo actuators.",
+        "Contributed to the design and refinement of per-finger tensioning mechanisms.",
       ],
       teamOutcomes: [
         "Programmed and assembled a working hand.",
@@ -339,7 +338,7 @@ window.PORTFOLIO = {
         "Won both the block-stacking competition and the grape-picking and transfer challenge.",
       ],
       outcome: [
-        "First place in both competition challenges.",
+        "Achieved first place in both class design challenges.",
       ],
       gallery: [
         // A video entry: "video" is the .mp4 file, "src" is the still image shown before it plays.
@@ -375,14 +374,14 @@ window.PORTFOLIO = {
       ],
       process: [],
       contributions: [
-        "Designed and wired the full circuit on a breadboard: a breath sensor connected to a tube, a Raspberry Pi, and an OLED display over I2C.",
-        "Wrote the C++ code that reads the breath signal and converts it into real-time control of the game.",
-        "Built the game itself, including the scrolling obstacles, live score, and game-over screen.",
-        "Framed the design around pulmonary rehabilitation, so that controlled breathing is what keeps the player alive.",
+        "Designed and wired the sensing circuit integrating a breath sensor, Raspberry Pi, and OLED display through I2C.",
+        "Developed C++ code to process real-time breath signals and translate them into game controls.",
+        "Programmed the interactive game, including scrolling obstacles, live scoring, and game-over functionality.",
+        "Applied respiratory rehabilitation principles to create a game in which controlled breathing directly drives gameplay.",
       ],
       teamOutcomes: [],
       outcome: [
-        "A working, playable prototype controlled entirely by the user's breath.",
+        "Built a fully functional, playable prototype controlled entirely through the user's breath.",
       ],
       gallery: [
         { video: "images/projects/breath-controlled-copd-game/breath-game-demo.mp4", src: "images/projects/breath-controlled-copd-game/breath-game-demo-poster.jpg", alt: "Video of the game being played by blowing into a tube while holding the OLED screen", caption: "Playing the game with breath control" },
@@ -410,9 +409,7 @@ window.PORTFOLIO = {
         src: "images/projects/pulse-oximeter/bmes-symposium-poster.jpg",
         alt: "BMES Symposium poster for the pulse oximeter project",
       },
-      highlights: [
-        { value: "Selected", label: "for the BMES Symposium" },
-      ],
+      highlights: [],
       overview: [
         "The goal was to design and build a working pulse oximeter. We chose to design for pediatric patients, where a device that looks approachable can make measurement easier.",
       ],
@@ -423,9 +420,9 @@ window.PORTFOLIO = {
         { title: "Signal processing", text: "Visualized the pulse signal and calculated heart rate and oxygenation from the captured data." },
       ],
       contributions: [
-        "Originated the narwhal-themed enclosure concept.",
-        "Designed the device housing in Fusion 360, including internal mounts for the photodiode, LEDs, and battery compartment.",
-        "Collaborated on the breadboard sensing circuit.",
+        "Originated the narwhal-inspired enclosure concept to make pulse oximetry more engaging for pediatric patients.",
+        "Designed the device housing in Fusion 360, incorporating internal mounts for optical sensors, LEDs, and battery components.",
+        "Collaborated on development of the breadboard-based sensing circuit.",
       ],
       teamOutcomes: [
         "Built a complete device that measures heart rate and blood oxygenation.",
@@ -433,7 +430,7 @@ window.PORTFOLIO = {
         "Selected from all Build Team projects for the annual BMES Symposium.",
       ],
       outcome: [
-        "Showcased at the annual BMES Symposium.",
+        "Functional device concept showcased at the annual BMES Symposium.",
       ],
       gallery: [],
     },

@@ -81,7 +81,7 @@
       var main = images[0], thumbs = images.slice(1);
 
       var meta = [p.org, p.dates].filter(Boolean).join(" · ");
-      var result = (p.outcome && p.outcome[0]) || "";
+      var results = (p.outcome || []).filter(Boolean);
 
       return '<article class="project" id="' + esc(p.id) + '" aria-labelledby="t-' + esc(p.id) + '">' +
         '<div class="p-meta-row"><span class="num">' + pad(i + 1) + '</span><span class="eyebrow">' + esc(p.category) + '</span>' +
@@ -108,15 +108,13 @@
 
         '<div class="p-details">' +
           '<div class="p-contrib">' +
-            '<h4 class="eyebrow">My contributions</h4>' +
+            '<h4 class="sec-title">My Contributions</h4>' +
             list(p.contributions, "bullets") +
-            (result ? '<p class="p-result"><span class="eyebrow">Result</span> ' + esc(result) + '</p>' : "") +
-            (p.note ? '<p class="note">' + esc(p.note) + '</p>' : "") +
+            (results.length ? '<h4 class="sec-title">' + esc(D.resultsLabel || "Results") + '</h4>' + list(results, "bullets") : "") +
           '</div>' +
           '<div class="p-side">' +
-            (p.role ? '<h4 class="eyebrow">My role</h4><p class="p-role">' + esc(p.role) + '</p>' : "") +
             ((p.highlights && p.highlights.length) ? '<ul class="stats">' + p.highlights.map(function (h) { return '<li><b>' + esc(h.value) + '</b><span>' + esc(h.label) + '</span></li>'; }).join("") + '</ul>' : "") +
-            '<h4 class="eyebrow">Skills</h4>' +
+            '<h4 class="sec-title">Skills</h4>' +
             '<ul class="tags">' + (p.skills || []).map(function (s) { return '<li class="tag">' + esc(s) + '</li>'; }).join("") + '</ul>' +
           '</div>' +
         '</div>' +

@@ -137,7 +137,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .p-details { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 40px; margin-top: 32px; }
 .p-details h4 { margin-bottom: 12px; }
-.p-side h4:not(:first-child) { margin-top: 24px; }
+.sec-title { font-size: 17px; font-weight: 700; color: var(--navy); letter-spacing: 0; margin: 0 0 12px; }
+.p-contrib .sec-title + .bullets + .sec-title { margin-top: 22px; }
+.p-side .stats { margin-top: 0; margin-bottom: 26px; }
 .bullets li { position: relative; padding: 0 0 10px 20px; color: var(--ink-2); font-size: 16px; }
 .bullets li::before { content: ""; position: absolute; left: 0; top: .78em; width: 9px; height: 2px; background: var(--accent); }
 .p-result { margin: 14px 0 0; padding-top: 14px; border-top: 1px solid var(--line); font-size: 15.5px; color: var(--ink); }

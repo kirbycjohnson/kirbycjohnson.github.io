@@ -135,16 +135,16 @@ Each project in `data.js` has these fields:
 | Field | Where it shows |
 |---|---|
 | `title`, `category`, `summary` | Project card and top of the project page |
-| `role` | "My role" on the card and in the project page header |
+| `role` | Kept for your notes; not shown on the page |
 | `org`, `dates`, `team` | Info row on the project page (leave `""` to hide one) |
 | `skills` | Tags on the card (first 6) and the full list on the project page |
 | `cover` | The large image for the project |
-| `highlights` | Big numbers beside your role (optional) |
+| `highlights` | Big numbers above the Skills list (optional) |
 | `overview`, `process` | Kept for your own notes; not shown on the page |
-| `contributions` | **"What I did"**: your individual work |
+| `contributions` | **"My Contributions"** bullets: your individual work |
 | `teamOutcomes` | Kept for your notes; not shown on the page |
-| `outcome` | The "Result" line (first paragraph only) |
-| `note` | Small gray note, for example about withheld IP (optional) |
+| `outcome` | **"Results"** bullets (rename the heading with `resultsLabel` at the top of `projects`) |
+| `note` | Kept for your notes; not shown on the page |
 | `gallery` | Thumbnails beside the cover (first three) |
 | `links` | Buttons under the summary, e.g. `{ label: "Final report (PDF)", href: "assets/docs/My_Report.pdf" }`. Upload the PDF to `assets/docs/` first. |
 | `status: "in-progress"` | Adds an "In progress" label |
