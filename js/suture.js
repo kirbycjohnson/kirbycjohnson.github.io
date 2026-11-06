@@ -10,10 +10,10 @@
   if (!fine || calm) return;
 
   var SPACING = 16;   // px between stitches
-  var DELAY = 650;    // ms before thread becomes a stitch
-  var LIFE = 3600;    // ms a stitch stays on the page
-  var FADE = 900;     // ms of fade-in / fade-out
-  var STITCH = 5;     // half length of a stitch, px
+  var DELAY = 400;    // ms before thread becomes a stitch
+  var LIFE = 1400;    // ms a stitch stays on the page
+  var FADE = 650;     // ms of fade-in / fade-out
+  var STITCH = 4;     // half length of a stitch, px
   var NAVY = "20,33,61", WHITE = "255,255,255";
 
   document.documentElement.classList.add("needle-cursor");
@@ -81,7 +81,7 @@
       var s0 = stitches[j - 1], s1 = stitches[j], ag = now - s1.t;
       if (ag < DELAY || s1.t - s0.t > 250) continue;
       var op = Math.min(1, (ag - DELAY) / 220) * Math.min(1, (LIFE - ag) / FADE);
-      ctx.strokeStyle = "rgba(" + colorAt(s1.x - sx, s1.y - sy) + "," + (0.3 * op).toFixed(3) + ")";
+      ctx.strokeStyle = "rgba(" + colorAt(s1.x - sx, s1.y - sy) + "," + (0.18 * op).toFixed(3) + ")";
       ctx.beginPath();
       ctx.moveTo(s0.x - sx, s0.y - sy);
       ctx.lineTo(s1.x - sx, s1.y - sy);
@@ -89,7 +89,7 @@
     }
 
     // Stitches: short crossings perpendicular to the direction of travel.
-    ctx.lineWidth = 1.7;
+    ctx.lineWidth = 1.3;
     stitches.forEach(function (st) {
       var age = now - st.t;
       if (age < DELAY) return;
@@ -97,7 +97,7 @@
       var x = st.x - sx, y = st.y - sy;
       var nx = -Math.sin(st.a) * STITCH, ny = Math.cos(st.a) * STITCH;
       var tx = Math.cos(st.a) * 1.6, ty = Math.sin(st.a) * 1.6; // slight slant, like a real suture
-      ctx.strokeStyle = "rgba(" + colorAt(x, y) + "," + (0.85 * o).toFixed(3) + ")";
+      ctx.strokeStyle = "rgba(" + colorAt(x, y) + "," + (0.55 * o).toFixed(3) + ")";
       ctx.beginPath();
       ctx.moveTo(x - nx - tx, y - ny - ty);
       ctx.lineTo(x + nx + tx, y + ny + ty);
@@ -106,11 +106,11 @@
 
     // Thread: the last moment of movement, trailing behind the needle.
     if (path.length > 1) {
-      ctx.lineWidth = 1.1;
+      ctx.lineWidth = 0.9;
       for (var i = 1; i < path.length; i++) {
         var p0 = path[i - 1], p1 = path[i];
         var o2 = 1 - Math.min(1, (now - p1.t) / DELAY);
-        ctx.strokeStyle = "rgba(" + colorAt(p1.x - sx, p1.y - sy) + "," + (0.55 * o2).toFixed(3) + ")";
+        ctx.strokeStyle = "rgba(" + colorAt(p1.x - sx, p1.y - sy) + "," + (0.35 * o2).toFixed(3) + ")";
         ctx.beginPath();
         ctx.moveTo(p0.x - sx, p0.y - sy);
         ctx.lineTo(p1.x - sx, p1.y - sy);
