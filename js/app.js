@@ -79,7 +79,7 @@
       var images = [p.cover].concat(p.gallery || []).filter(function (g) { return g && g.src; });
       var start = gal.length;
       images.forEach(function (g) { gal.push(g); });
-      var main = images[0], thumbs = images.slice(1, 4);
+      var main = images[0], thumbs = images.slice(1);
 
       var meta = [p.org, p.dates].filter(Boolean).join(" · ");
       var result = (p.outcome && p.outcome[0]) || "";
@@ -94,15 +94,15 @@
           return '<a class="btn btn-ghost" href="' + esc(l.href) + '" target="_blank" rel="noopener">' + ICON.doc + ' ' + esc(l.label) + '</a>';
         }).join("") + '</div>' : "") +
 
-        '<div class="p-media' + (thumbs.length === 0 ? " single" : thumbs.length === 1 ? " pair" : "") + '">' +
+        '<div class="p-media">' +
           '<button type="button" class="shot main" data-gi="' + start + '" aria-label="Enlarge image: ' + esc(main.caption || main.alt) + '">' +
-            '<img src="' + esc(main.src) + '" alt="' + esc(main.alt) + '" width="1200" height="800" loading="' + (i < 1 ? "eager" : "lazy") + '" decoding="async"' + ((main.position || main.fit) ? ' style="' + (main.position ? 'object-position:' + esc(main.position) + ';' : '') + (main.fit ? 'object-fit:' + esc(main.fit) + ';background:#fff;' : '') + '"' : "") + '>' +
+            '<img src="' + esc(main.src) + '" alt="' + esc(main.alt) + '" loading="' + (i < 1 ? "eager" : "lazy") + '" decoding="async"' + ((main.position || main.fit) ? ' style="' + (main.position ? 'object-position:' + esc(main.position) + ';' : '') + (main.fit ? 'object-fit:' + esc(main.fit) + ';background:#fff;' : '') + '"' : "") + '>' +
           '</button>' +
           (thumbs.length ? '<div class="thumbs">' + thumbs.map(function (g, k) {
             return '<button type="button" class="shot' + (g.video ? " is-video" : "") + '" data-gi="' + (start + 1 + k) + '" aria-label="' + (g.video ? "Play video: " : "Enlarge image: ") + esc(g.caption || g.alt) + '">' +
               (g.video
                 ? '<video src="' + esc(g.video) + '" poster="' + esc(g.src) + '" muted loop playsinline autoplay preload="metadata" aria-hidden="true"></video><span class="play-badge" aria-hidden="true">▶</span>'
-                : '<img src="' + esc(g.src) + '" alt="' + esc(g.alt) + '" width="600" height="450" loading="lazy" decoding="async"' + ((g.position || g.fit) ? ' style="' + (g.position ? 'object-position:' + esc(g.position) + ';' : '') + (g.fit ? 'object-fit:' + esc(g.fit) + ';background:#fff;' : '') + '"' : "") + '>') +
+                : '<img src="' + esc(g.src) + '" alt="' + esc(g.alt) + '" loading="lazy" decoding="async"' + ((g.position || g.fit) ? ' style="' + (g.position ? 'object-position:' + esc(g.position) + ';' : '') + (g.fit ? 'object-fit:' + esc(g.fit) + ';background:#fff;' : '') + '"' : "") + '>') +
               '</button>';
           }).join("") + '</div>' : "") +
         '</div>' +
@@ -202,6 +202,24 @@
     renderFooter();
   }
   guardImages();
+
+  /* Fade elements in as they scroll into view. */
+  (function setupReveal() {
+    if (!("IntersectionObserver" in window)) return;
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var els = document.querySelectorAll(".project .p-meta-row, .project .p-title, .project .p-org, .project .p-summary, .project .p-links, .project .p-media, .project .p-details, .section-head, .skill-group");
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    els.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.92) return; // already on screen: show right away
+      el.classList.add("reveal");
+      io.observe(el);
+    });
+  })();
 
   // Old links to project.html?id=... jump to that project on the home page.
   if (document.body.getAttribute("data-page") === "project") {
