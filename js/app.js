@@ -91,7 +91,7 @@
         (meta ? '<p class="p-org">' + esc(meta) + '</p>' : "") +
         '<p class="p-summary">' + esc(p.summary) + '</p>' +
 
-        '<div class="p-media' + (thumbs.length ? "" : " single") + '">' +
+        '<div class="p-media' + (thumbs.length === 0 ? " single" : thumbs.length === 1 ? " pair" : "") + '">' +
           '<button type="button" class="shot main" data-gi="' + start + '" aria-label="Enlarge image: ' + esc(main.caption || main.alt) + '">' +
             '<img src="' + esc(main.src) + '" alt="' + esc(main.alt) + '" width="1200" height="800" loading="' + (i < 1 ? "eager" : "lazy") + '" decoding="async"' + (main.position ? ' style="object-position:' + esc(main.position) + '"' : "") + '>' +
           '</button>' +
