@@ -308,8 +308,8 @@ window.PORTFOLIO = {
         "Surgeon interviews", "Anatomical research", "Design for manufacturability",
       ],
       cover: {
-        src: "images/projects/lvb-device/cover-device-concept-rendering.svg",
-        alt: "CAD rendering of the LVB device concept",
+        src: "images/projects/lvb-device/universal-vessel-anastomosis-poster.jpg",
+        alt: "Kirby standing beside the team’s Universal Vessel Anastomosis need poster at Johns Hopkins CBID",
       },
       highlights: [
         { value: "180+", label: "hours of OR observation" },
@@ -342,9 +342,7 @@ window.PORTFOLIO = {
       ],
       note: "This is an industry-sponsored project with IP in progress, so some design details and images are intentionally withheld.",
       gallery: [
-        { src: "images/projects/lvb-device/cad-assembly-exploded-view.svg", alt: "Exploded CAD assembly of the device", caption: "CAD assembly" },
-        { src: "images/projects/lvb-device/anatomy-lymphatic-venous-illustration.svg", alt: "Illustration of lymphatic vessel and venule anatomy", caption: "Anatomical constraints" },
-        { src: "images/projects/lvb-device/prototype-iterations-bench.svg", alt: "Rapid prototype iterations on the bench", caption: "Prototype iterations" },
+        { src: "images/projects/lvb-device/team-in-scrubs-or-observation.jpg", alt: "The microsurgery biodesign team in scrubs during clinical observations", caption: "Clinical immersion in the OR" },
       ],
     },
 
