@@ -247,9 +247,8 @@ window.PORTFOLIO = {
         "Arduino", "Pediatric design",
       ],
       cover: {
-        src: "images/projects/pulse-oximeter/bmes-symposium-poster.jpg",
-        alt: "BMES Symposium poster for the pulse oximeter project",
-        position: "center top",
+        src: "images/projects/pulse-oximeter/narwhal-measurement-piece-3d-printed.jpg",
+        alt: "Blue 3D-printed narwhal-shaped finger piece of the pulse oximeter",
       },
       highlights: [
         { value: "Selected", label: "for the BMES Symposium" },
@@ -277,8 +276,12 @@ window.PORTFOLIO = {
         "Showcased at the annual BMES Symposium.",
       ],
       gallery: [
-        { src: "images/projects/pulse-oximeter/narwhal-housing-cad.jpg", alt: "Fusion 360 model of the narwhal-shaped finger housing", caption: "Narwhal housing in Fusion 360" },
-        { src: "images/projects/pulse-oximeter/printed-housings.jpg", alt: "3D-printed shell-shaped electronics case and blue narwhal measurement piece", caption: "Printed electronics case and measurement piece" },
+        { src: "images/projects/pulse-oximeter/narwhal-housing-cad-front.jpg", alt: "Fusion 360 model of the narwhal-shaped finger housing", caption: "Narwhal housing in Fusion 360" },
+        { src: "images/projects/pulse-oximeter/shell-electronics-case-3d-printed.jpg", alt: "White 3D-printed shell-shaped case for the PCB and Arduino Nano", caption: "Shell-inspired electronics case" },
+        { src: "images/projects/pulse-oximeter/pcb-layout-eagle.jpg", alt: "EAGLE PCB layout for the pulse oximeter circuit", caption: "PCB layout in EAGLE" },
+        { src: "images/projects/pulse-oximeter/narwhal-housing-cad-back.jpg", alt: "Rear view of the narwhal housing CAD model", caption: "Housing CAD, rear view" },
+        { src: "images/projects/pulse-oximeter/breadboard-sensing-circuit.jpg", alt: "Breadboard prototype of the sensing circuit connected to an Arduino", caption: "Breadboard sensing circuit" },
+        { src: "images/projects/pulse-oximeter/bmes-symposium-poster.jpg", alt: "BMES Symposium poster for the pulse oximeter project", caption: "BMES Symposium poster" },
       ],
     },
     /* ---------------- PROJECT: LVB device ---------------- */
