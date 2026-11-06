@@ -130,10 +130,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .shot:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .shot img, .shot video { display: block; transition: opacity .2s ease; }
 .shot:hover img { opacity: .92; }
-.shot.main { width: 100%; background: transparent; border: 1px solid var(--line); }
-.shot.main img { width: 100%; height: auto; max-height: 78vh; object-fit: contain !important; margin: 0 auto; }
-.thumbs { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
-.thumbs .shot { height: 220px; flex: 0 0 auto; max-width: 100%; border: 1px solid var(--line); background: #fff; }
+.shot.main { width: fit-content; max-width: 85%; margin: 0 auto; background: transparent; border: 1px solid var(--line); }
+.shot.main img { width: auto; max-width: 100%; height: auto; max-height: 58vh; object-fit: contain !important; }
+.thumbs { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 14px; }
+.thumbs .shot { height: 280px; flex: 0 0 auto; max-width: 100%; border: 1px solid var(--line); background: #fff; }
 .thumbs .shot img, .thumbs .shot video { height: 100%; width: auto; max-width: 100%; object-fit: contain !important; }
 
 .p-details { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 40px; margin-top: 32px; }
@@ -196,7 +196,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .side-nav { margin-top: 28px; padding-top: 0; }
   .content { padding: 32px 20px 0; }
   .thumbs { gap: 8px; }
-  .thumbs .shot { height: 140px; }
+  .shot.main { max-width: 100%; }
+  .thumbs .shot { height: 170px; }
   .project { padding: 36px 0 40px; }
 }
 
