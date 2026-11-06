@@ -203,6 +203,37 @@
   }
   guardImages();
 
+  /* Size each project's pictures to one shared height so they all fit on one
+     centered row at the same scale (nothing is cropped). On narrow screens
+     the row wraps instead of shrinking below MIN_H. */
+  (function sizeMediaRows() {
+    var MIN_H = 170, MAX_H = 340, GAP = 14;
+    var rows = Array.prototype.slice.call(document.querySelectorAll(".p-media"));
+    function ratio(el) {
+      var w = el.naturalWidth || el.videoWidth, h = el.naturalHeight || el.videoHeight;
+      return w && h ? w / h : 4 / 3;
+    }
+    function fit(row) {
+      var media = row.querySelectorAll(".shot > img, .shot > video");
+      if (!media.length) return;
+      var sum = 0;
+      media.forEach(function (m) { sum += ratio(m); });
+      var avail = row.clientWidth - GAP * (media.length - 1) - 2 * media.length;
+      var h = Math.max(MIN_H, Math.min(MAX_H, Math.floor(avail / sum)));
+      if (window.innerWidth <= 600) h = Math.min(h, 220);
+      row.style.setProperty("--media-h", h + "px");
+    }
+    function fitAll() { rows.forEach(fit); }
+    rows.forEach(function (row) {
+      row.querySelectorAll(".shot > img, .shot > video").forEach(function (m) {
+        m.addEventListener(m.tagName === "VIDEO" ? "loadedmetadata" : "load", function () { fit(row); });
+      });
+    });
+    var t;
+    window.addEventListener("resize", function () { clearTimeout(t); t = setTimeout(fitAll, 120); });
+    fitAll();
+  })();
+
   /* Fade elements in as they scroll into view. */
   (function setupReveal() {
     if (!("IntersectionObserver" in window)) return;
