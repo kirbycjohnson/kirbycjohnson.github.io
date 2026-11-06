@@ -237,7 +237,11 @@
   (function setupReveal() {
     if (!("IntersectionObserver" in window)) return;
     if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    var els = document.querySelectorAll(".project .p-meta-row, .project .p-title, .project .p-org, .project .p-summary, .project .p-links, .project .p-media, .project .p-details, .section-head, .skill-group");
+    var els = document.querySelectorAll(".project .p-meta-row, .project .p-title, .project .p-org, .project .p-summary, .project .p-links, .project .p-media .shot, .project .p-contrib, .project .p-side, .section-head, .skill-group");
+    // Pictures in a row and the two text columns arrive one after another.
+    document.querySelectorAll(".p-media, .p-details").forEach(function (row) {
+      row.querySelectorAll(".p-media .shot, .p-contrib, .p-side").forEach(function (el, i) { el.style.setProperty("--d", (i * 0.12) + "s"); });
+    });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }

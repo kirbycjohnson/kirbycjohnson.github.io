@@ -195,3 +195,4 @@ The theme is white, black, and navy. To change the navy, edit `--navy` at the to
 - **Confidential work:** the LVB and India projects are industry-sponsored. Check with CBID and your sponsor before posting CAD, photos, or details. The LVB page already includes a note that some details are withheld.
 - **Patient photos:** for field research images, only use photos you have consent to share, and avoid identifiable patients.
 - **Custom domain (optional):** buy a domain (e.g. `kirbyjohnson.com`), then in **Settings → Pages → Custom domain** enter it and follow GitHub's DNS instructions.
+- **Suturing cursor:** `js/suture.js` turns the mouse into a needle that leaves fading stitches. It is off on phones and tablets. To turn it off everywhere, delete the `js/suture.js` script line near the bottom of `index.html`.
