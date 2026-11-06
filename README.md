@@ -10,8 +10,8 @@ A fast, static portfolio site built with plain HTML, CSS, and JavaScript. No bui
 
 ```
 portfolio/
-├── index.html                 Home page (About, Projects, Skills, Resume)
-├── project.html               Detail page for every project (project.html?id=...)
+├── index.html                 The whole site: sidebar, Projects, Skills
+├── project.html               Redirects old project links to the home page
 ├── 404.html                   "Page not found" page
 ├── favicon.svg                Browser tab icon (KJ monogram)
 ├── .nojekyll                  Tells GitHub Pages to serve files as-is
@@ -25,6 +25,7 @@ portfolio/
 │       └── Kirby_Johnson_Resume.pdf
 └── images/
     ├── placeholder.svg        Shown automatically if an image path is wrong
+    ├── icons/                 Skill icons (one file per skill)
     ├── profile/
     │   └── headshot-placeholder.svg
     └── projects/
@@ -71,9 +72,9 @@ You only do this once. It takes about 10 minutes.
 
 **Tip:** In `data.js`, keep every piece of text inside quotes, and keep the comma at the end of each item. If the page goes blank after an edit, a missing quote or comma is almost always the cause. Undo the last change and try again.
 
-### Change your name, email, LinkedIn, or intro
+### Change your name, email, LinkedIn, or the sidebar
 
-Open `js/data.js` and edit the `site` section (name, title, email, LinkedIn) and the `about` section (headline, the two intro paragraphs, facts, and experience). The header, footer, and every page update automatically.
+Open `js/data.js`. The `site` section holds your name, title, email, LinkedIn, and location. The `about` section holds the short statement under your name and your education. To show a round photo above your name, set `photo:` to your image path, for example `"images/profile/kirby-johnson-headshot.jpg"`. Leave it as `""` to hide the photo.
 
 ### Replace your resume
 
@@ -102,13 +103,13 @@ Every placeholder says **"REPLACE WITH: filename.jpg"** in its bottom corner, so
 
 If a path has a typo, the site shows a gray "image not found" tile instead of breaking, so you'll spot it right away.
 
-**Your headshot:** upload it to `images/profile/` (portrait orientation, about 4:5, around 1000 px wide) and change `photo:` in the `about` section.
+**Your headshot:** upload a square photo (about 600 × 600 px) to `images/profile/` and set `photo:` in the `about` section.
 
 **Cover framing:** if the important part of a cover photo is cut off, add a `position` line to its `cover`, like `position: "center 30%"`. The first number moves left/right, the second moves up/down.
 
 ### Add a photo to a project's gallery
 
-In the project's `gallery` list, copy one line and edit it:
+In the project's `gallery` list, copy one line and edit it. The cover image shows large, and the first three gallery images show as thumbnails beside it:
 
 ```js
 gallery: [
@@ -117,7 +118,7 @@ gallery: [
 ],
 ```
 
-Any number of images works. Visitors can click each one to enlarge it.
+Visitors can click any image to enlarge it and use the arrow keys to flip through the rest.
 
 ### Edit a project's text
 
@@ -129,25 +130,24 @@ Each project in `data.js` has these fields:
 | `role` | "My role" on the card and in the project page header |
 | `org`, `dates`, `team` | Info row on the project page (leave `""` to hide one) |
 | `skills` | Tags on the card (first 6) and the full list on the project page |
-| `cover` | Card image and the large image on the project page |
-| `highlights` | Big numbers under the cover image (optional) |
-| `overview` | "Overview" section (one or more paragraphs) |
-| `process` | "Design process" numbered steps |
+| `cover` | The large image for the project |
+| `highlights` | Big numbers beside your role (optional) |
+| `overview`, `process` | Kept for your own notes; not shown on the page |
 | `contributions` | **"What I did"**: your individual work |
-| `teamOutcomes` | **"What the team accomplished"**: the team's results |
-| `outcome` | "Outcome" section |
+| `teamOutcomes` | Kept for your notes; not shown on the page |
+| `outcome` | The "Result" line (first paragraph only) |
 | `note` | Small gray note, for example about withheld IP (optional) |
-| `gallery` | Image grid at the bottom |
+| `gallery` | Thumbnails beside the cover (first three) |
 | `status: "in-progress"` | Adds an "In progress" label |
 | `hidden: true` | Removes the project from the site without deleting it |
 
-Keeping `contributions` and `teamOutcomes` separate is what makes your personal work clear to a recruiter, so put only your own work under `contributions`.
+Put only your own work under `contributions`, since that list is what tells a recruiter what you personally did.
 
 ### Add a new project
 
 1. In `data.js`, copy an entire project block, from its `{` to its closing `},`.
 2. Paste it where you want it to appear in the list.
-3. Give it a new, unique `id` (lowercase, dashes, e.g. `"peg-tube-securement"`). This becomes its web address: `project.html?id=peg-tube-securement`.
+3. Give it a new, unique `id` (lowercase, dashes, e.g. `"peg-tube-securement"`). You can link straight to it with `#peg-tube-securement` at the end of your site address.
 4. Create a matching image folder: `images/projects/peg-tube-securement/`.
 5. Fill in the text and image paths.
 
@@ -157,15 +157,26 @@ Keeping `contributions` and `teamOutcomes` separate is what makes your personal 
 - **Hide temporarily:** set `hidden: true`.
 - **Delete:** remove the whole block, and optionally its image folder.
 
-The first project gets a wide "featured" card, so put your strongest project first.
+Put your strongest project first.
 
 ### Add a skill or skill category
 
-In the `skills` section of `data.js`, add a word in quotes to any `items` list. To add a category, copy a `{ category: ..., items: [...] },` block.
+In the `skills` section of `data.js`, each skill is one line with a name and an icon:
+
+```js
+{ name: "SolidWorks", icon: "solidworks" },
+```
+
+The `icon` is a file name from `images/icons/` without the `.svg`. To add a skill:
+
+1. Copy a line and change the name.
+2. For the icon, either reuse one already in `images/icons/`, use `icon: "generic"` (a simple check-mark icon), or add your own. To add your own, download the logo as an SVG or a square PNG (for example, search "SolidWorks logo SVG"), name it with dashes like `ansys.svg`, upload it to `images/icons/`, and set `icon: "ansys"`. For a PNG, include the extension: `icon: "ansys.png"`.
+
+To add a category, copy a whole `{ category: ..., items: [...] },` block.
 
 ### Change the accent color or fonts
 
-At the top of `css/styles.css`, change `--accent` (and `--accent-ink`, a slightly darker shade used for text). Fonts are IBM Plex Sans and IBM Plex Mono, loaded from Google Fonts in the `<head>` of each HTML file.
+The theme is white, black, and navy. To change the navy, edit `--navy` at the top of `css/styles.css`. Fonts are IBM Plex Sans and IBM Plex Mono, loaded from Google Fonts in the `<head>` of each HTML file.
 
 ---
 

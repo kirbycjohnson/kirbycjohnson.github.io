@@ -34,52 +34,22 @@ window.PORTFOLIO = {
   },
 
   /* ------------------------------------------------------------------------
-     2. ABOUT / INTRODUCTION
+     2. SIDEBAR (left column): short statement, education, optional photo
      ------------------------------------------------------------------------ */
   about: {
-    headline: "I turn what I see in the operating room into devices I can build, test, and hand back to clinicians.",
-    intro: [
-      "I’m a biomedical engineer completing my M.S.E. at the Johns Hopkins Center for Bioengineering Innovation & Design, where I work with surgeons to find unmet clinical needs and develop devices to address them.",
-      "My work sits between the clinic and the machine shop: CAD and fixture design, CNC machining and rapid prototyping, wearable sensor systems, and three years coordinating structural heart device studies at UCLA Health.",
+    // One or two sentences under your name.
+    statement:
+      "Biomedical engineer at Johns Hopkins CBID, turning clinical needs into medical devices through mechanical design and hands-on prototyping.",
+
+    education: [
+      { degree: "M.S.E. Biomedical Engineering", school: "Johns Hopkins University (CBID)", date: "Expected May 2027" },
+      { degree: "B.S. Bioengineering", school: "University of California, Los Angeles", date: "June 2026" },
     ],
-    // Replace with your own photo, e.g. "images/profile/kirby-johnson-headshot.jpg"
-    photo: "images/profile/headshot-placeholder.svg",
+
+    // Optional round photo above your name. Leave as "" to hide it.
+    // Example: "images/profile/kirby-johnson-headshot.jpg"
+    photo: "",
     photoAlt: "Portrait of Kirby Johnson",
-
-    // Short facts shown beside the introduction. Add, remove, or edit freely.
-    facts: [
-      { label: "Education", value: "M.S.E. Biomedical Engineering, Johns Hopkins CBID", detail: "Expected May 2027" },
-      { label: "", value: "B.S. Bioengineering, UCLA", detail: "June 2026" },
-      { label: "Focus", value: "Medical device R&D, mechanical design, prototyping" },
-    ],
-
-    // Experience timeline under the introduction.
-    experience: [
-      {
-        role: "Biodesign Engineer",
-        org: "Johns Hopkins Center for Bioengineering Innovation & Design",
-        dates: "Jun 2026 – Present",
-        note: "Two industry-sponsored projects: a microsurgery device and joint pain care in rural India.",
-      },
-      {
-        role: "Engineering Intern, Surgical Simulation",
-        org: "Applied Medical",
-        dates: "Jun – Sep 2025",
-        note: "Production fixture design, molding process improvement, ultrasonic welding DoE, IQ/OQ validation.",
-      },
-      {
-        role: "Clinical Research Coordinator",
-        org: "UCLA Health, Adult Congenital Heart Disease",
-        dates: "Oct 2023 – Present",
-        note: "7 concurrent structural heart device studies; IRB and FDA approvals for 20 compassionate use stent procedures.",
-      },
-    ],
-
-    publication: {
-      title: "Long-Term Durability of Melody Valves Implanted in Small (<30 kg) Patients",
-      venue: "Journal of the American College of Cardiology, May 2025",
-      url: "", // optional link to the paper
-    },
   },
 
   /* ------------------------------------------------------------------------
@@ -94,119 +64,6 @@ window.PORTFOLIO = {
        team achieved together. The project page shows these side by side.
      ------------------------------------------------------------------------ */
   projects: [
-    /* ---------------- PROJECT: LVB device ---------------- */
-    {
-      id: "lvb-device",
-      hidden: false,
-      status: "in-progress",
-      title: "Lymphovenous Bypass (LVB) Device Development",
-      category: "Biomedical Engineering / Medical Device Design",
-      summary:
-        "An industry-sponsored device for lymphovenous bypass, the supermicrosurgery that reroutes lymphatic fluid into nearby veins to treat lymphedema. Built from 180+ hours in the OR and 50+ stakeholder interviews.",
-      role:
-        "Biomedical design team member focused on device concept development, engineering design, clinical needs assessment, and translating surgeon feedback into design requirements.",
-      org: "Johns Hopkins CBID · Industry-sponsored",
-      dates: "Jun 2026 – Present",
-      team: "CBID master’s biodesign team",
-      skills: [
-        "Medical device design", "CAD", "Design thinking", "Clinical needs assessment",
-        "Surgeon interviews", "Anatomical research", "Design for manufacturability",
-      ],
-      cover: {
-        src: "images/projects/lvb-device/cover-device-concept-rendering.svg",
-        alt: "CAD rendering of the LVB device concept",
-      },
-      highlights: [
-        { value: "180+", label: "hours of OR observation" },
-        { value: "349", label: "clinical needs validated" },
-        { value: "50+", label: "stakeholder interviews" },
-      ],
-      overview: [
-        "Lymphovenous bypass connects lymphatic vessels to nearby venules, often less than a millimeter across, so trapped lymphatic fluid can drain. It is one of the most technically demanding procedures in reconstructive microsurgery.",
-        "Our team was embedded in reconstructive microsurgery and peripheral nerve operating rooms to find where a new device could make a meaningful difference, then committed to the highest-impact need for development.",
-      ],
-      process: [
-        { title: "Clinical immersion", text: "Observed 180+ hours of reconstructive microsurgery and peripheral nerve cases, documenting workflow, instruments, and failure points." },
-        { title: "Need validation", text: "Tested 349 candidate needs through 50+ interviews with surgeons, value analysis committees, patients, and other stakeholders." },
-        { title: "Need selection", text: "Scored needs on clinical, technical, and commercial feasibility to choose the single highest-impact opportunity." },
-        { title: "Concept to prototype", text: "Generating concepts, modeling in CAD, and building rapid prototypes, with surgeon feedback turned into design requirements at each round." },
-        { title: "Protecting the IP", text: "Working toward a patent filing on the selected concept." },
-      ],
-      contributions: [
-        "Conducted OR observations and documented procedural pain points that fed the team’s needs list.",
-        "Interviewed surgeons and stakeholders, then translated their feedback into measurable design requirements.",
-        "Researched lymphatic and venous anatomy to set dimensional and access constraints for the device.",
-        "Generated device concepts and developed CAD models and prototypes, with design for manufacturability in mind.",
-      ],
-      teamOutcomes: [
-        "Validated 349 clinical needs and narrowed them to one through a feasibility analysis.",
-        "Advancing the selected concept through rapid prototyping toward a patent filing.",
-      ],
-      outcome: [
-        "Ongoing. The team has selected its need and is iterating on prototypes with surgeon input.",
-      ],
-      note: "This is an industry-sponsored project with IP in progress, so some design details and images are intentionally withheld.",
-      gallery: [
-        { src: "images/projects/lvb-device/cad-assembly-exploded-view.svg", alt: "Exploded CAD assembly of the device", caption: "CAD assembly" },
-        { src: "images/projects/lvb-device/anatomy-lymphatic-venous-illustration.svg", alt: "Illustration of lymphatic vessel and venule anatomy", caption: "Anatomical constraints" },
-        { src: "images/projects/lvb-device/prototype-iterations-bench.svg", alt: "Rapid prototype iterations on the bench", caption: "Prototype iterations" },
-      ],
-    },
-
-    /* ---------------- PROJECT: MSK joint pain, India ---------------- */
-    {
-      id: "msk-joint-pain-india",
-      hidden: false,
-      status: "in-progress",
-      title: "Improving Joint Pain Care in Rural India",
-      category: "Global Health / Needs Finding & Device Design",
-      summary:
-        "Field research across 15 rural and urban healthcare sites in India to understand why people with musculoskeletal pain go without care, now driving a solution to expand access to rehabilitation.",
-      role:
-        "Biodesign engineer conducting field research, stakeholder validation, need prioritization, and solution development.",
-      org: "Johns Hopkins CBID · Industry-sponsored",
-      dates: "Jun 2026 – Present",
-      team: "CBID global health biodesign team with an open-source health NGO partner",
-      skills: [
-        "Contextual inquiry", "Stakeholder interviews", "Needs prioritization",
-        "Global health design", "Clinical needs assessment", "Field study planning",
-      ],
-      cover: {
-        src: "images/projects/msk-joint-pain-india/cover-field-research-site.svg",
-        alt: "Field research at a healthcare site in India",
-      },
-      highlights: [
-        { value: "15", label: "rural and urban sites" },
-        { value: "367", label: "findings validated" },
-      ],
-      overview: [
-        "Many musculoskeletal (MSK) pain conditions respond well to guided exercise, but in much of rural India, rehabilitation is hard to reach. The team set out to understand the barriers firsthand before proposing anything.",
-      ],
-      process: [
-        { title: "Field research", text: "Observed care and interviewed patients and providers across 15 rural and urban healthcare sites." },
-        { title: "Validation", text: "Validated 367 findings with patients, care providers, and an open-source NGO partner." },
-        { title: "Prioritization", text: "Ranked needs by clinical impact, technical feasibility, and market potential." },
-        { title: "Solution and field test", text: "Developing a solution for exercise-responsive MSK pain, validating it with physiotherapists, and planning a follow-up field study in India." },
-      ],
-      contributions: [
-        "Conducted on-site research and interviews with patients and care providers.",
-        "Synthesized observations into validated findings with the NGO partner.",
-        "Scored and prioritized needs against clinical, technical, and market criteria.",
-        "Developing and testing solution concepts with physiotherapists.",
-      ],
-      teamOutcomes: [
-        "Mapped barriers to MSK care across 15 sites and validated 367 findings.",
-        "Selected a focus on expanding rehabilitation access for exercise-responsive MSK pain.",
-      ],
-      outcome: [
-        "Ongoing. A follow-up field study in India will test the solution with patients and physiotherapists.",
-      ],
-      gallery: [
-        { src: "images/projects/msk-joint-pain-india/needs-prioritization-matrix.svg", alt: "Needs prioritization matrix", caption: "Needs prioritization" },
-        { src: "images/projects/msk-joint-pain-india/solution-concept-sketch.svg", alt: "Early solution concept sketch", caption: "Solution concept" },
-      ],
-    },
-
     /* ---------------- PROJECT: Applied Medical ---------------- */
     {
       id: "applied-medical-surgical-simulation",
@@ -424,32 +281,183 @@ window.PORTFOLIO = {
         { src: "images/projects/pulse-oximeter/printed-housings.jpg", alt: "3D-printed shell-shaped electronics case and blue narwhal measurement piece", caption: "Printed electronics case and measurement piece" },
       ],
     },
+    /* ---------------- PROJECT: LVB device ---------------- */
+    {
+      id: "lvb-device",
+      hidden: false,
+      status: "in-progress",
+      title: "Lymphovenous Bypass (LVB) Device Development",
+      category: "Biomedical Engineering / Medical Device Design",
+      summary:
+        "An industry-sponsored device for lymphovenous bypass, the supermicrosurgery that reroutes lymphatic fluid into nearby veins to treat lymphedema. Built from 180+ hours in the OR and 50+ stakeholder interviews.",
+      role:
+        "Biomedical design team member focused on device concept development, engineering design, clinical needs assessment, and translating surgeon feedback into design requirements.",
+      org: "Johns Hopkins CBID · Industry-sponsored",
+      dates: "Jun 2026 – Present",
+      team: "CBID master’s biodesign team",
+      skills: [
+        "Medical device design", "CAD", "Design thinking", "Clinical needs assessment",
+        "Surgeon interviews", "Anatomical research", "Design for manufacturability",
+      ],
+      cover: {
+        src: "images/projects/lvb-device/cover-device-concept-rendering.svg",
+        alt: "CAD rendering of the LVB device concept",
+      },
+      highlights: [
+        { value: "180+", label: "hours of OR observation" },
+        { value: "349", label: "clinical needs validated" },
+        { value: "50+", label: "stakeholder interviews" },
+      ],
+      overview: [
+        "Lymphovenous bypass connects lymphatic vessels to nearby venules, often less than a millimeter across, so trapped lymphatic fluid can drain. It is one of the most technically demanding procedures in reconstructive microsurgery.",
+        "Our team was embedded in reconstructive microsurgery and peripheral nerve operating rooms to find where a new device could make a meaningful difference, then committed to the highest-impact need for development.",
+      ],
+      process: [
+        { title: "Clinical immersion", text: "Observed 180+ hours of reconstructive microsurgery and peripheral nerve cases, documenting workflow, instruments, and failure points." },
+        { title: "Need validation", text: "Tested 349 candidate needs through 50+ interviews with surgeons, value analysis committees, patients, and other stakeholders." },
+        { title: "Need selection", text: "Scored needs on clinical, technical, and commercial feasibility to choose the single highest-impact opportunity." },
+        { title: "Concept to prototype", text: "Generating concepts, modeling in CAD, and building rapid prototypes, with surgeon feedback turned into design requirements at each round." },
+        { title: "Protecting the IP", text: "Working toward a patent filing on the selected concept." },
+      ],
+      contributions: [
+        "Conducted OR observations and documented procedural pain points that fed the team’s needs list.",
+        "Interviewed surgeons and stakeholders, then translated their feedback into measurable design requirements.",
+        "Researched lymphatic and venous anatomy to set dimensional and access constraints for the device.",
+        "Generated device concepts and developed CAD models and prototypes, with design for manufacturability in mind.",
+      ],
+      teamOutcomes: [
+        "Validated 349 clinical needs and narrowed them to one through a feasibility analysis.",
+        "Advancing the selected concept through rapid prototyping toward a patent filing.",
+      ],
+      outcome: [
+        "Ongoing. The team has selected its need and is iterating on prototypes with surgeon input.",
+      ],
+      note: "This is an industry-sponsored project with IP in progress, so some design details and images are intentionally withheld.",
+      gallery: [
+        { src: "images/projects/lvb-device/cad-assembly-exploded-view.svg", alt: "Exploded CAD assembly of the device", caption: "CAD assembly" },
+        { src: "images/projects/lvb-device/anatomy-lymphatic-venous-illustration.svg", alt: "Illustration of lymphatic vessel and venule anatomy", caption: "Anatomical constraints" },
+        { src: "images/projects/lvb-device/prototype-iterations-bench.svg", alt: "Rapid prototype iterations on the bench", caption: "Prototype iterations" },
+      ],
+    },
+
+    /* ---------------- PROJECT: MSK joint pain, India ---------------- */
+    {
+      id: "msk-joint-pain-india",
+      hidden: false,
+      status: "in-progress",
+      title: "Improving Joint Pain Care in Rural India",
+      category: "Global Health / Needs Finding & Device Design",
+      summary:
+        "Field research across 15 rural and urban healthcare sites in India to understand why people with musculoskeletal pain go without care, now driving a solution to expand access to rehabilitation.",
+      role:
+        "Biodesign engineer conducting field research, stakeholder validation, need prioritization, and solution development.",
+      org: "Johns Hopkins CBID · Industry-sponsored",
+      dates: "Jun 2026 – Present",
+      team: "CBID global health biodesign team with an open-source health NGO partner",
+      skills: [
+        "Contextual inquiry", "Stakeholder interviews", "Needs prioritization",
+        "Global health design", "Clinical needs assessment", "Field study planning",
+      ],
+      cover: {
+        src: "images/projects/msk-joint-pain-india/cover-field-research-site.svg",
+        alt: "Field research at a healthcare site in India",
+      },
+      highlights: [
+        { value: "15", label: "rural and urban sites" },
+        { value: "367", label: "findings validated" },
+      ],
+      overview: [
+        "Many musculoskeletal (MSK) pain conditions respond well to guided exercise, but in much of rural India, rehabilitation is hard to reach. The team set out to understand the barriers firsthand before proposing anything.",
+      ],
+      process: [
+        { title: "Field research", text: "Observed care and interviewed patients and providers across 15 rural and urban healthcare sites." },
+        { title: "Validation", text: "Validated 367 findings with patients, care providers, and an open-source NGO partner." },
+        { title: "Prioritization", text: "Ranked needs by clinical impact, technical feasibility, and market potential." },
+        { title: "Solution and field test", text: "Developing a solution for exercise-responsive MSK pain, validating it with physiotherapists, and planning a follow-up field study in India." },
+      ],
+      contributions: [
+        "Conducted on-site research and interviews with patients and care providers.",
+        "Synthesized observations into validated findings with the NGO partner.",
+        "Scored and prioritized needs against clinical, technical, and market criteria.",
+        "Developing and testing solution concepts with physiotherapists.",
+      ],
+      teamOutcomes: [
+        "Mapped barriers to MSK care across 15 sites and validated 367 findings.",
+        "Selected a focus on expanding rehabilitation access for exercise-responsive MSK pain.",
+      ],
+      outcome: [
+        "Ongoing. A follow-up field study in India will test the solution with patients and physiotherapists.",
+      ],
+      gallery: [
+        { src: "images/projects/msk-joint-pain-india/needs-prioritization-matrix.svg", alt: "Needs prioritization matrix", caption: "Needs prioritization" },
+        { src: "images/projects/msk-joint-pain-india/solution-concept-sketch.svg", alt: "Early solution concept sketch", caption: "Solution concept" },
+      ],
+    },
+
   ],
 
   /* ------------------------------------------------------------------------
-     4. SKILLS
-     Add a skill by adding a line in quotes. Add a category by copying a block.
+     4. SKILLS (shown with icons)
+     Each skill is { name: "...", icon: "..." }. The icon is a file name
+     (without .svg) from images/icons/. Use icon: "generic" if there is no
+     matching icon, or add your own SVG/PNG to images/icons/ (see README).
      ------------------------------------------------------------------------ */
   skills: [
     {
-      category: "CAD & Mechanical Design",
-      items: ["Creo Parametric", "SolidWorks", "Fusion 360", "AutoCAD", "Technical drawings", "Design for manufacturability"],
+      category: "CAD & Design",
+      items: [
+        { name: "SolidWorks", icon: "solidworks" },
+        { name: "Creo Parametric", icon: "creo" },
+        { name: "Fusion 360", icon: "fusion-360" },
+        { name: "AutoCAD", icon: "autocad" },
+        { name: "Technical drawings", icon: "technical-drawing" },
+        { name: "Design for manufacturing", icon: "dfm" },
+      ],
     },
     {
       category: "Prototyping & Manufacturing",
-      items: ["CNC machining", "Rapid prototyping", "3D printing", "Injection molding", "Fixture design", "Mechanical assembly", "Design of experiments"],
+      items: [
+        { name: "CNC machining", icon: "cnc" },
+        { name: "3D printing", icon: "3d-printing" },
+        { name: "Molding", icon: "molding" },
+        { name: "Rapid prototyping", icon: "rapid-prototyping" },
+        { name: "Fixture design", icon: "fixture-design" },
+        { name: "Mechanical assembly", icon: "mechanical-assembly" },
+      ],
+    },
+    {
+      category: "Hardware & Programming",
+      items: [
+        { name: "MATLAB", icon: "matlab" },
+        { name: "Python", icon: "python" },
+        { name: "Arduino", icon: "arduino" },
+        { name: "C++", icon: "cplusplus" },
+        { name: "ESP32", icon: "esp32" },
+        { name: "PCB design", icon: "pcb-design" },
+        { name: "IMU integration", icon: "imu" },
+      ],
+    },
+    {
+      category: "Testing & Validation",
+      items: [
+        { name: "Design of experiments", icon: "design-of-experiments" },
+        { name: "IQ/OQ protocols", icon: "iq-oq" },
+        { name: "Engineering evaluations", icon: "engineering-evaluation" },
+        { name: "Test protocols", icon: "test-protocols" },
+        { name: "Work instructions", icon: "work-instructions" },
+        { name: "IRB & FDA submissions", icon: "irb-fda" },
+      ],
     },
     {
       category: "Biomedical Engineering",
-      items: ["Medical device development", "Clinical needs assessment", "Anatomical research", "Surgical device design", "Sensor integration", "Wearable technology"],
-    },
-    {
-      category: "Programming & Electronics",
-      items: ["MATLAB", "Python", "Arduino / C++", "ESP32", "PCB design", "IMU sensors"],
-    },
-    {
-      category: "Testing & Regulatory",
-      items: ["IQ/OQ validation", "Test protocols", "Engineering evaluations", "Work instructions", "IRB and FDA submissions"],
+      items: [
+        { name: "Medical device development", icon: "medical-device" },
+        { name: "Clinical needs assessment", icon: "clinical-needs" },
+        { name: "Surgical device design", icon: "surgical-device" },
+        { name: "Anatomical research", icon: "anatomical-research" },
+        { name: "Sensor integration", icon: "sensor-integration" },
+        { name: "Wearable technology", icon: "wearable-technology" },
+      ],
     },
   ],
 };
